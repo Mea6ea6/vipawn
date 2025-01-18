@@ -1,0 +1,17 @@
+:root {
+    --font: unset;
+    --white: #fff;
+    --black: #000;
+    --transition: 0.3s;
+    --max-width: 1440px;
+}
+@media screen and (max-width: 1440px) {
+    :root {
+        --max-width: 768px;
+    }
+}
+@media screen and (max-width: 768px) {
+    :root {
+        --max-width: 320px;
+    }
+}
