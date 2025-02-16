@@ -1,17 +1,26 @@
 :root {
-    --font: unset;
+    --common-font: 'Roboto';
+    --heading-font: 'Playfair Display';
+    --common-weight: 400; 
+    --fat-weight: 700; 
+    --accent: #f6c669;
+    --black: #0d0d0d;
     --white: #fff;
-    --black: #000;
+    --gray-100: #ababab;
+    --gray-200: #4c4c4c;
+    --gray-300: #222222;
+    --gray-400: #171717;
+    --max-width: 1340px;
     --transition: 0.3s;
-    --max-width: 1440px;
 }
 @media screen and (max-width: 1440px) {
     :root {
-        --max-width: 768px;
+        --max-width: 1000px;
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1100px) {
     :root {
-        --max-width: 320px;
+        --max-width: 408px;
+        --page-padding: 16px;
     }
 }
