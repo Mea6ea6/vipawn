@@ -36,7 +36,7 @@
         </nav>
 
         <div class="sign">
-            <form class="sign__form sign-up">
+            <form class="sign__form sign-up" method="get">
                 <h2 class="sign__title">Register</h2>
                 <div class="sign__fields">
                     <div class="sign__field">
@@ -142,7 +142,56 @@
             </a>
         </header>
 
-        <main class="content"></main>
+        <main class="content">
+            <section class="promo">
+                <video class="promo__video" autoplay loop muted playsinline>
+                    <source src="./images/promo/__vipawn.mp4" type="video/mp4">
+                </video>
+                <h1 class="promo__title">VIPAWN</h1>
+                <p class="promo__caption">Luxury Pawnshop</p>
+                <button class="promo__button">
+                    <span class="promo__button-icon-span">
+                        <img class="promo__button-icon" src="./images/promo/__play.svg" alt="play">
+                    </span>
+                    <span class="promo__button-text-span">
+                        Pause the video
+                    </span>
+                </button>
+            </section>
+
+            <section class="about">
+                <a class="about__link" href="#">
+                    <div class="about__card">
+                        <h3 class="about__card-title">Purchasing luxuries</h3>
+                        <p class="about__card-text">Luxury items available for purchase. Explore our collection and find exclusive pieces tailored to your taste.</p>
+                        <p class="about__card-link">
+                            Explore our products
+                            <img class="about__card-link-icon" src="./images/about/__arrow.svg" alt="move-to">
+                            <span class="about__card-link-span">Market</span>
+                        </p>
+                    </div>
+                </a>
+                <a  class="about__link" href="#">
+                    <div class="about__card">
+                        <h3 class="about__card-title">Ready to sell?</h3>
+                        <p class="about__card-text">Receive immediate cash for luxury watches, gold, and jewelry in Florida. We offer unmatched valueand exceed local offers.</p>
+                        <p class="about__card-link">
+                            Fill out the form
+                            <img class="about__card-link-icon" src="./images/about/__arrow.svg" alt="move-to">
+                            <span class="about__card-link-span">Pawn</span>
+                        </p>
+                    </div>
+                </a>
+                <div class="about__card">
+                    <h3 class="about__card-title">Get exclusive offers</h3>
+                    <p class="about__card-text">Subscribe to our newsletter and be the first to learn about new arrivals, unique auctions and personalized offers.</p>
+                    <form class="about__card-form" method="post">
+                        <input class="about__card-input" type="text" placeholder="example@gmail.com">
+                        <button class="about__card-btn" type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </section>
+        </main>        
 
         <footer class="footer">
             <div class="footer__container">

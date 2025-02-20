@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const logInForm = document.querySelector('.sign-in');
     const signUpForm = document.querySelector('.sign-up');
     const hintBtn = document.querySelector('.sign__hint-btn');
+    const promoVideo = document.querySelector('.promo__video');
+    const promoButton = document.querySelector('.promo__button');
+    const promoButtonText = document.querySelector('.promo__button-text-span');
 
     const showPopup = (form) => {
         signContainer.classList.add('sign_active');
@@ -38,6 +41,16 @@ document.addEventListener('DOMContentLoaded', () => {
     signContainer.addEventListener('click', (event) => {
         if (event.target === signContainer) {
             hidePopups();
+        }
+    });
+
+    promoButton.addEventListener("click", () => {
+        if (promoVideo.paused) {
+            promoVideo.play();
+            promoButtonText.innerHTML = "Pause the video";
+        } else {
+            promoVideo.pause();
+            promoButtonText.innerHTML = "Play the video";
         }
     });
 });
