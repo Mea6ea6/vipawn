@@ -69,17 +69,17 @@
                         I have read and accept the Terms and Conditions <span class="sign__check-box-span">*</span>
                     </label>
                 </div>
-                <button class="sign__btn">Create account</button>
+                <button class="sign__btn" type="button">Create account</button>
                 <div class="sign__alt">
                     <p class="sign__alt-title">Or register with</p>
                     <div class="sign__alt-btns">
-                        <button class="sign__alt-btn">
+                        <button class="sign__alt-btn" type="button">
                             <img class="sign__alt-btn-icon" src="./images/sign/__google.svg" alt="Google">Google
                         </button>
-                        <button class="sign__alt-btn">
+                        <button class="sign__alt-btn" type="button">
                             <img class="sign__alt-btn-icon" src="./images/sign/__facebook.svg" alt="Facebook">Facebook
                         </button>
-                        <button class="sign__alt-btn">
+                        <button class="sign__alt-btn" type="button">
                             <img class="sign__alt-btn-icon" src="./images/sign/__twitter.svg" alt="Twitter">Twitter
                         </button>
                     </div>
@@ -106,17 +106,17 @@
                         Keep me logged in
                     </label>
                 </div>
-                <button class="sign__btn">Log in now</button>
+                <button class="sign__btn" type="button">Log in now</button>
                 <div class="sign__alt">
                     <p class="sign__alt-title">Or sign in with</p>
                     <div class="sign__alt-btns">
-                        <button class="sign__alt-btn">
+                        <button class="sign__alt-btn" type="button">
                             <img class="sign__alt-btn-icon" src="./images/sign/__google.svg" alt="Google">Google
                         </button>
-                        <button class="sign__alt-btn">
+                        <button class="sign__alt-btn" type="button">
                             <img class="sign__alt-btn-icon" src="./images/sign/__facebook.svg" alt="Facebook">Facebook
                         </button>
-                        <button class="sign__alt-btn">
+                        <button class="sign__alt-btn" type="button">
                             <img class="sign__alt-btn-icon" src="./images/sign/__twitter.svg" alt="Twitter">Twitter
                         </button>
                     </div>
@@ -149,7 +149,7 @@
                 </video>
                 <h1 class="promo__title">VIPAWN</h1>
                 <p class="promo__caption">Luxury Pawnshop</p>
-                <button class="promo__button">
+                <button class="promo__button" type="button">
                     <span class="promo__button-icon-span">
                         <img class="promo__button-icon" src="./images/promo/__play.svg" alt="play">
                     </span>
@@ -160,28 +160,24 @@
             </section>
 
             <section class="about">
-                <a class="about__link" href="#">
-                    <div class="about__card">
-                        <h3 class="about__card-title">Purchasing luxuries</h3>
-                        <p class="about__card-text">Luxury items available for purchase. Explore our collection and find exclusive pieces tailored to your taste.</p>
-                        <p class="about__card-link">
-                            Explore our products
-                            <img class="about__card-link-icon" src="./images/about/__arrow.svg" alt="move-to">
-                            <span class="about__card-link-span">Market</span>
-                        </p>
-                    </div>
-                </a>
-                <a  class="about__link" href="#">
-                    <div class="about__card">
-                        <h3 class="about__card-title">Ready to sell?</h3>
-                        <p class="about__card-text">Receive immediate cash for luxury watches, gold, and jewelry in Florida. We offer unmatched valueand exceed local offers.</p>
-                        <p class="about__card-link">
-                            Fill out the form
-                            <img class="about__card-link-icon" src="./images/about/__arrow.svg" alt="move-to">
-                            <span class="about__card-link-span">Pawn</span>
-                        </p>
-                    </div>
-                </a>
+                <div class="about__card">
+                    <h3 class="about__card-title">Purchasing luxuries</h3>
+                    <p class="about__card-text">Luxury items available for purchase. Explore our collection and find exclusive pieces tailored to your taste.</p>
+                    <a class="about__card-link" href="#">
+                        Explore our products
+                        <img class="about__card-link-icon" src="./images/about/__arrow.svg" alt="move-to">
+                        <span class="about__card-link-span">Market</span>
+                    </a>
+                </div>
+                <div class="about__card">
+                    <h3 class="about__card-title">Ready to sell?</h3>
+                    <p class="about__card-text">Receive immediate cash for luxury watches, gold, and jewelry in Florida. We offer unmatched valueand exceed local offers.</p>
+                    <a class="about__card-link" href="#">
+                        Fill out the form
+                        <img class="about__card-link-icon" src="./images/about/__arrow.svg" alt="move-to">
+                        <span class="about__card-link-span">Pawn</span>
+                    </a>
+                </div>
                 <div class="about__card">
                     <h3 class="about__card-title">Get exclusive offers</h3>
                     <p class="about__card-text">Subscribe to our newsletter and be the first to learn about new arrivals, unique auctions and personalized offers.</p>
@@ -191,7 +187,300 @@
                     </form>
                 </div>
             </section>
-        </main>        
+
+            <section class="novelties">
+                <div class="novelties__text">
+                    <p class="section-caption">New Arrivals</p>
+                    <h2 class="section-title">Exclusive products <br class="indent"> for true high-end connoisseurs</h2>
+                    <p class="novelties__description">We present a curated selection of luxury itemsthat combine exceptional quality with timeless elegance. <br class="indent"> Each piece is meticulously chosen to reflect individuality and sophistication, helping you express your unique style.</p>
+                </div>
+                <ul class="novelties__cards">
+                    <li class="novelties__card novelties__card_active">
+                        <div class="novelties__card-preview">
+                            <div class="novelties__card-background" style="background-color: #324d3f"></div>
+                            <img class="novelties__card-img" src="./images/novelties/__new-item-1.png" alt="clock">
+                        </div>
+                        <div class="novelties__card-info">
+                            <div class="novelties__card-heading">
+                                <h3 class="novelties__card-title">Datejust</h3>
+                                <p class="novelties__card-badge">New</p>
+                            </div>
+                            <p class="novelties__card-description">The Datejust watch, created in 1945, became the first waterproof automatic wrist chronometer with a date indicator at 3 o'clock in the dial window.</p>
+                            <div class="novelties__card-details">
+                                <div class="novelties__card-detail">
+                                    <p class="novelties__card-detail-title">Brand</p>
+                                    <p class="novelties__card-detail-name">Rolex</p>
+                                </div>
+                                <div class="novelties__card-detail">
+                                    <p class="novelties__card-detail-title">Series</p>
+                                    <p class="novelties__card-detail-name">Oyster Perpetual</p>
+                                </div>
+                            </div>
+                            <div class="novelties__card-actions">
+                                <a class="novelties__card-view" href="#">View details</a>
+                                <button class="novelties__card-cart" type="button">
+                                    Add to cart
+                                    <img class="novelties__card-cart-icon" src="./images/novelties/__cart.svg" alt="cart">
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="novelties__card">
+                        <div class="novelties__card-preview">
+                            <div class="novelties__card-background" style="background-color: #462e2e"></div>
+                            <img class="novelties__card-img" src="./images/novelties/__new-item-2.png" alt="clock">
+                        </div>
+                        <div class="novelties__card-info">
+                            <div class="novelties__card-heading">
+                                <h3 class="novelties__card-title">Datejust</h3>
+                                <p class="novelties__card-badge">New</p>
+                            </div>
+                            <p class="novelties__card-description">The Datejust watch, created in 1945, became the first waterproof automatic wrist chronometer with a date indicator at 3 o'clock in the dial window.</p>
+                            <div class="novelties__card-details">
+                                <div class="novelties__card-detail">
+                                    <p class="novelties__card-detail-title">Brand</p>
+                                    <p class="novelties__card-detail-name">Rolex</p>
+                                </div>
+                                <div class="novelties__card-detail">
+                                    <p class="novelties__card-detail-title">Series</p>
+                                    <p class="novelties__card-detail-name">Oyster Perpetual</p>
+                                </div>
+                            </div>
+                            <div class="novelties__card-actions">
+                                <a class="novelties__card-view" href="#">View details</a>
+                                <button class="novelties__card-cart" type="button">
+                                    Add to cart
+                                    <img class="novelties__card-cart-icon" src="./images/novelties/__cart.svg" alt="cart">
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="novelties__card">
+                        <div class="novelties__card-preview">
+                            <div class="novelties__card-background" style="background-color: #494c31"></div>
+                            <img class="novelties__card-img" src="./images/novelties/__new-item-3.png" alt="clock">
+                        </div>
+                        <div class="novelties__card-info">
+                            <div class="novelties__card-heading">
+                                <h3 class="novelties__card-title">Datejust</h3>
+                                <p class="novelties__card-badge">New</p>
+                            </div>
+                            <p class="novelties__card-description">The Datejust watch, created in 1945, became the first waterproof automatic wrist chronometer with a date indicator at 3 o'clock in the dial window.</p>
+                            <div class="novelties__card-details">
+                                <div class="novelties__card-detail">
+                                    <p class="novelties__card-detail-title">Brand</p>
+                                    <p class="novelties__card-detail-name">Rolex</p>
+                                </div>
+                                <div class="novelties__card-detail">
+                                    <p class="novelties__card-detail-title">Series</p>
+                                    <p class="novelties__card-detail-name">Oyster Perpetual</p>
+                                </div>
+                            </div>
+                            <div class="novelties__card-actions">
+                                <a class="novelties__card-view" href="#">View details</a>
+                                <button class="novelties__card-cart" type="button">
+                                    Add to cart
+                                    <img class="novelties__card-cart-icon" src="./images/novelties/__cart.svg" alt="cart">
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="novelties__navigation">
+                    <div class="novelties__carousel">
+                        <button class="novelties__carousel-btn novelties__carousel_deactive" type="button">
+                            <img class="novelties__carousel-btn-icon" src="./images/novelties/__prev.svg" alt="prev">
+                        </button>
+                        <div class="novelties__carousel-indicator">
+                            <p class="novelties__carousel-page">1<span class="novelties__carousel-page-span">/</span>5</p>
+                            <div class="novelties__carousel-bar">
+                                <div class="novelties__carousel-progress"></div>
+                            </div>
+                        </div>
+                        <button class="novelties__carousel-btn" type="button">
+                            <img class="novelties__carousel-btn-icon" src="./images/novelties/__next.svg" alt="next">
+                        </button>
+                    </div>
+                    <a class="novelties__navigation-more" href="#">See more</a>
+                </div>
+            </section>
+
+            <section class="brands">
+                <img class="brands__logo" src="./images/brands/__brand-1.svg" alt="brand">
+                <img class="brands__logo" src="./images/brands/__brand-2.svg" alt="brand">
+                <img class="brands__logo" src="./images/brands/__brand-3.svg" alt="brand">
+                <img class="brands__logo" src="./images/brands/__brand-4.svg" alt="brand">
+                <img class="brands__logo" src="./images/brands/__brand-5.svg" alt="brand">
+                <img class="brands__logo" src="./images/brands/__brand-6.svg" alt="brand">
+            </section>
+
+            <section class="featured">
+                <div class="featured__heading">
+                    <img class="featured__heading-img" src="./images/featured/__background.png" alt="background">
+                    <p class="section-caption">Featured</p>
+                    <h2 class="section-title">Handpicked recommendations</h2>
+                    <button class="featured__heading-btn" type="button">See more</button>
+                </div>
+                <ul class="featured__cards">
+                    <li class="featured__card">
+                        <p class="featured__card-sale">sale</p>
+                        <a class="featured__card-promo" href="#">
+                            <button class="featured__card-like" type="button"></button>
+                            <img class="featured__card-img" src="./images/featured/__product-1.png" alt="featured item">
+                        </a>
+                        <div class="featured__card-content">
+                            <h4 class="featured__card-title">Sea-Dweller</h4>
+                            <div class="featured__card-details">
+                                <div class="featured__card-detail">
+                                    <p class="featured__card-detail-title">Brand</p>
+                                    <p class="featured__card-detail-name">Rolex</p>
+                                </div>
+                                <div class="featured__card-detail">
+                                    <p class="featured__card-detail-title">Series</p>
+                                    <p class="featured__card-detail-name">Oyster Perpetual</p>
+                                </div>
+                                <p class="featured__card-price">
+                                    <span class="featured__card-price-span">$ 85 690</span> / $ 21 422 x 4
+                                </p>
+                            </div>
+                            <div class="featured__card-added">
+                                <div class="featured__card-added-text">Already in the cart</div>
+                                <button class="featured__card-added-btn" type="button">
+                                    <img class="featured__card-added-icon" src="./images/featured/__delete.svg" alt="cart">
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="featured__card">
+                        <a class="featured__card-promo" href="#">
+                            <button class="featured__card-like" type="button"></button>
+                            <img class="featured__card-img" src="./images/featured/__product-2.png" alt="featured item">
+                        </a>
+                        <div class="featured__card-content">
+                            <h4 class="featured__card-title">Oyster Perpetual</h4>
+                            <div class="featured__card-details">
+                                <div class="featured__card-detail">
+                                    <p class="featured__card-detail-title">Brand</p>
+                                    <p class="featured__card-detail-name">Rolex</p>
+                                </div>
+                                <div class="featured__card-detail">
+                                    <p class="featured__card-detail-title">Series</p>
+                                    <p class="featured__card-detail-name">Oyster Perpetual</p>
+                                </div>
+                                <p class="featured__card-price">
+                                    <span class="featured__card-price-span">$ 8 450</span> / $ 2 112 x 4
+                                </p>
+                            </div>
+                            <div class="featured__card-added">
+                                <div class="featured__card-added-text">Already in the cart</div>
+                                <button class="featured__card-added-btn" type="button">
+                                    <img class="featured__card-added-icon" src="./images/featured/__delete.svg" alt="cart">
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="featured__card">
+                        <a class="featured__card-promo" href="#">
+                            <button class="featured__card-like" type="button"></button>
+                            <img class="featured__card-img" src="./images/featured/__product-3.png" alt="featured item">
+                        </a>
+                        <div class="featured__card-content">
+                            <h4 class="featured__card-title">Submariner</h4>
+                            <div class="featured__card-details">
+                                <div class="featured__card-detail">
+                                    <p class="featured__card-detail-title">Brand</p>
+                                    <p class="featured__card-detail-name">Rolex</p>
+                                </div>
+                                <div class="featured__card-detail">
+                                    <p class="featured__card-detail-title">Series</p>
+                                    <p class="featured__card-detail-name">Oyster Perpetual</p>
+                                </div>
+                                <p class="featured__card-price">
+                                    <span class="featured__card-price-span">$ 11 250</span> / $ 2 812 x 4
+                                </p>
+                            </div>
+                            <button class="featured__card-cart" type="button">Add to cart
+                                <img class="featured__card-cart-icon" src="./images/featured/__cart.svg" alt="cart">
+                            </button>
+                        </div>
+                    </li>
+                    <li class="featured__card">
+                        <a class="featured__card-promo" href="#">
+                            <button class="featured__card-like" type="button"></button>
+                            <img class="featured__card-img" src="./images/featured/__product-4.png" alt="featured item">
+                        </a>
+                        <div class="featured__card-content">
+                            <h4 class="featured__card-title">Perpetual 1908</h4>
+                            <div class="featured__card-details">
+                                <div class="featured__card-detail">
+                                    <p class="featured__card-detail-title">Brand</p>
+                                    <p class="featured__card-detail-name">Rolex</p>
+                                </div>
+                                <div class="featured__card-detail">
+                                    <p class="featured__card-detail-title">Series</p>
+                                    <p class="featured__card-detail-name">Cellini (Perpetual)</p>
+                                </div>
+                                <p class="featured__card-price">
+                                    <span class="featured__card-price-span">$ 2 750</span> / $ 687 x 4
+                                </p>
+                            </div>
+                            <div class="featured__card-added">
+                                <div class="featured__card-added-text">Already in the cart</div>
+                                <button class="featured__card-added-btn" type="button">
+                                    <img class="featured__card-added-icon" src="./images/featured/__delete.svg" alt="cart">
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="faq">
+                <div class="faq__header">
+                    <p class="section-caption">Support</p>
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                </div>
+                <ul class="faq__list">
+                    <li class="faq__item">
+                        <div class="faq__question">
+                            <p class="faq__question-text">How does the pawn shop work?</p>
+                            <div class="faq__question-icon"></div>
+                        </div>
+                        <p class="faq__answer">A pawn shop offers short-term loans using personal items as collateral. You bring in an item of value, such as jewelry or electronics, and the pawn shop assesses its worth. Based on this value, they offera loan amount. If you agree, you receive the money and a ticket for reclaiming your item. You mustrepay the loan, including interest, within the agreed time. If you can't repay, the pawn shop keeps the item, but your credit score isn’t affected. Alternatively, you can sell items outright without taking a loan.</p>
+                    </li>
+                    <li class="faq__item">
+                        <div class="faq__question">
+                            <p class="faq__question-text">What items can I pawn or sell here?</p>
+                            <div class="faq__question-icon"></div>
+                        </div>
+                        <p class="faq__answer">A pawn shop offers short-term loans using personal items as collateral. You bring in an item of value, such as jewelry or electronics, and the pawn shop assesses its worth. Based on this value, they offera loan amount. If you agree, you receive the money and a ticket for reclaiming your item. You mustrepay the loan, including interest, within the agreed time. If you can't repay, the pawn shop keeps the item, but your credit score isn’t affected. Alternatively, you can sell items outright without taking a loan.</p>
+                    </li>
+                    <li class="faq__item">
+                        <div class="faq__question">
+                            <p class="faq__question-text">Do you accept jewelry, watches, or electronics?</p>
+                            <div class="faq__question-icon"></div>
+                        </div>
+                        <p class="faq__answer">A pawn shop offers short-term loans using personal items as collateral. You bring in an item of value, such as jewelry or electronics, and the pawn shop assesses its worth. Based on this value, they offera loan amount. If you agree, you receive the money and a ticket for reclaiming your item. You mustrepay the loan, including interest, within the agreed time. If you can't repay, the pawn shop keeps the item, but your credit score isn’t affected. Alternatively, you can sell items outright without taking a loan.</p>
+                    </li>
+                    <li class="faq__item">
+                        <div class="faq__question">
+                            <p class="faq__question-text">How do you determine the value of an item?</p>
+                            <div class="faq__question-icon"></div>
+                        </div>
+                        <p class="faq__answer">A pawn shop offers short-term loans using personal items as collateral. You bring in an item of value, such as jewelry or electronics, and the pawn shop assesses its worth. Based on this value, they offera loan amount. If you agree, you receive the money and a ticket for reclaiming your item. You mustrepay the loan, including interest, within the agreed time. If you can't repay, the pawn shop keeps the item, but your credit score isn’t affected. Alternatively, you can sell items outright without taking a loan.</p>
+                    </li>
+                    <li class="faq__item">
+                        <div class="faq__question">
+                            <p class="faq__question-text">What is the interest rate for loans?</p>
+                            <div class="faq__question-icon"></div>
+                        </div>
+                        <p class="faq__answer">A pawn shop offers short-term loans using personal items as collateral. You bring in an item of value, such as jewelry or electronics, and the pawn shop assesses its worth. Based on this value, they offera loan amount. If you agree, you receive the money and a ticket for reclaiming your item. You mustrepay the loan, including interest, within the agreed time. If you can't repay, the pawn shop keeps the item, but your credit score isn’t affected. Alternatively, you can sell items outright without taking a loan.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="contacts"></section>
+        </main>
 
         <footer class="footer">
             <div class="footer__container">
