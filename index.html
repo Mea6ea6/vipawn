@@ -36,7 +36,7 @@
         </nav>
 
         <div class="sign">
-            <form class="sign__form sign-up" method="get">
+            <form class="sign__form sign-up" action="post">
                 <h2 class="sign__title">Register</h2>
                 <div class="sign__fields">
                     <div class="sign__field">
@@ -45,16 +45,16 @@
                     </div>
                     <div class="sign__field">
                         <p class="sign__field-title">Email</p>
-                        <input class="sign__field-input" type="text" placeholder="example@gmail.com">
+                        <input class="sign__field-input" type="email" placeholder="example@gmail.com">
                     </div>
                     <div class="sign__create-pass">
                         <div class="sign__field">
                             <p class="sign__field-title">Password<span class="sign__field-title-span">*</span></p>
-                            <input class="sign__field-input" type="text" placeholder="Password">
+                            <input class="sign__field-input" type="password" placeholder="Password">
                         </div>
                         <div class="sign__field">
                             <p class="sign__field-title">Repeat Password<span class="sign__field-title-span">*</span></p>
-                            <input class="sign__field-input" type="text" placeholder="Repeat Password">
+                            <input class="sign__field-input" type="password" placeholder="Repeat Password">
                         </div>
                     </div>
                 </div>
@@ -86,7 +86,7 @@
                 </div>
             </form>
 
-            <form class="sign__form sign-in">
+            <form class="sign__form sign-in" action="get">
                 <h2 class="sign__title">Log in</h2>
                 <div class="sign__fields">
                     <div class="sign__field">
@@ -96,7 +96,7 @@
                     </div>
                     <div class="sign__field">
                         <p class="sign__field-title">Password</p>
-                        <input class="sign__field-input" type="text" placeholder="Password">
+                        <input class="sign__field-input" type="password" placeholder="Password">
                         <a class="sign__hint-link" href="#">Forgot your password?</a>
                     </div>
                 </div>
@@ -128,7 +128,7 @@
             <a class="header__home-link" href="#">
                 <img class="header__home-icon" src="./images/header/__home-icon.svg" alt="vipawn">
             </a>
-            <form class="header__search-bar">
+            <form class="header__search-bar" action="get">
                 <button class="header__search-btn" type="submit">
                     <img class="header__search-icon" src="./images/header/__search-icon.svg" alt="search">
                 </button>
@@ -181,8 +181,8 @@
                 <div class="about__card">
                     <h3 class="about__card-title">Get exclusive offers</h3>
                     <p class="about__card-text">Subscribe to our newsletter and be the first to learn about new arrivals, unique auctions and personalized offers.</p>
-                    <form class="about__card-form" method="post">
-                        <input class="about__card-input" type="text" placeholder="example@gmail.com">
+                    <form class="about__card-form" action="post">
+                        <input class="about__card-input" type="email" placeholder="example@gmail.com">
                         <button class="about__card-btn" type="submit">Subscribe</button>
                     </form>
                 </div>
@@ -192,7 +192,7 @@
                 <div class="novelties__text">
                     <p class="section-caption">New Arrivals</p>
                     <h2 class="section-title">Exclusive products <br class="indent"> for true high-end connoisseurs</h2>
-                    <p class="novelties__description">We present a curated selection of luxury itemsthat combine exceptional quality with timeless elegance. <br class="indent"> Each piece is meticulously chosen to reflect individuality and sophistication, helping you express your unique style.</p>
+                    <p class="novelties__description">We offer a curated selection of luxury items, blending exceptional quality with timeless elegance to reflect your unique style.</p>
                 </div>
                 <ul class="novelties__cards">
                     <li class="novelties__card novelties__card_active">
@@ -479,7 +479,66 @@
                 </ul>
             </section>
 
-            <section class="contacts"></section>
+            <section class="contact">
+                <form class="contact__form" action="post">
+                    <div class="contact__form-heading">
+                        <h3 class="contact__form-title">Have any query?</h3>
+                        <p class="contact__form-bage">Contact us</p>
+                    </div>
+                    <div class="contact__fields">
+                        <div class="contact__field">
+                            <p class="contact__field-title">Name<span class="contact__field-title-span">*</span></p>
+                            <input class="contact__field-input" type="text" placeholder="William Shakespeare">
+                        </div>
+                        <div class="contact__field">
+                            <p class="contact__field-title">Email<span class="contact__field-title-span">*</span></p>
+                            <input class="contact__field-input" type="email" placeholder="example@gmail.com">
+                        </div>
+                        <div class="contact__field">
+                            <p class="contact__field-title">Message<span class="contact__field-title-span">*</span></p>
+                            <textarea class="contact__field-textarea" rows="4" placeholder="Shall I compare thee to a summer's day?"></textarea>
+                        </div>
+                    </div>
+                    <div class="contact__check-boxes">
+                        <p class="contact__terms">Vipawn may keep me informed with personalized emails about products and services. See our <a class="contact__terms-link" href="#">Privacy Policy</a> for more details.</p>
+                        <label class="contact__check-box" for="email">
+                            <input class="contact__check-box-input" type="checkbox" id="email" name="email" value="E-mail" checked>
+                            Please contact me via e-mail
+                        </label>
+                        <label class="contact__check-box" for="terms">
+                            <input class="contact__check-box-input" type="checkbox" id="terms" name="terms" value="Terms">
+                            I have read and accept the Terms and Conditions <span class="contact__check-box-span">*</span>
+                        </label>
+                    </div>
+                    <button class="contact__btn" type="submit">Send</button>
+                </form>
+                <div class="contact__adresses">
+                    <div class="contact__adresses-heading">
+                        <h3 class="contact__adresses-title">Our addresses</h3>
+                        <p class="contact__adresses-caption">We welcome you to visit our locations. <br class="indent"> It will be our pleasure to assist you and provide a refined experience tailored to your needs.</p>
+                    </div>
+                    <div class="contact__adresses-list">
+                        <div class="contact__adress">
+                            <h3 class="contact__adress-title">Boca Raton</h3>
+                            <p class="contact__adress-text">485 NE 20th St, Boca Raton, FL 33431</p>
+                            <p class="contact__adress-phone">Phone <span class="contact__adress-phone-span">+1 (646) 288-1323</span></p>
+                            <div class="contact__adress-btns">
+                                <a class="contact__adress-uber" href="#">Uber</a>
+                                <a class="contact__adress-map" href="#">Open map <img class="contact__adress-map-icon" src="./images/contact/__map.svg" alt="map"></a>
+                            </div>
+                        </div>
+                        <div class="contact__adress">
+                            <h3 class="contact__adress-title">Coral Springs</h3>
+                            <p class="contact__adress-text">2137 N University Dr, Coral Springs, FL 33071</p>
+                            <p class="contact__adress-phone">Phone <span class="contact__adress-phone-span">+1 (954) 366-8920</span></p>
+                            <div class="contact__adress-btns">
+                                <a class="contact__adress-uber" href="#">Uber</a>
+                                <a class="contact__adress-map" href="#">Open map <img class="contact__adress-map-icon" src="./images/contact/__map.svg" alt="map"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
 
         <footer class="footer">
@@ -489,10 +548,10 @@
                     <a class="footer__link" href="#">Privacy Policy</a>
                 </div>
                 <p class="footer__copyright">Copyright © 2025 / All Rights Reserved / Made by <span class="footer__copyright-span">SURGE</span></p>
-                <div class="footer__links">
-                    <a class="footer__link" href="#">Instagram</a>
-                    <a class="footer__link" href="#">Facebook</a>
-                    <a class="footer__link" href="#">Telegram</a>
+                <div class="footer__socials">
+                    <a class="footer__social" href="#">Instagram</a>
+                    <a class="footer__social" href="#">Facebook</a>
+                    <a class="footer__social" href="#">Telegram</a>
                 </div>
             </div>
         </footer>

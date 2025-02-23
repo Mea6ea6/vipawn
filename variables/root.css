@@ -16,10 +16,10 @@
 }
 @media screen and (max-width: 1440px) {
     :root {
-        --max-width: 1000px;
+        --max-width: 728px;
     }
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 768px) {
     :root {
         --max-width: 408px;
         --page-padding: 16px;
