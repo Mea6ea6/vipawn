@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/x-icon/x-icon.svg" type="image/x-icon">
     <link rel="stylesheet" href="./pages/index.css" />
-    <title></title>
+    <title>Home</title>
 </head>
 <body class="background">
     <div class="page">
@@ -60,12 +60,12 @@
                 </div>
                 <div class="sign__check-boxes">
                     <p class="sign__terms">Vipawn may keep me informed with personalized emails about products and services. See our <a class="sign__terms-link" href="#">Privacy Policy</a> for more details.</p>
-                    <label class="sign__check-box" for="email">
-                        <input class="sign__check-box-input" type="checkbox" id="email" name="email" value="E-mail" checked>
+                    <label class="sign__check-box" for="reg-email">
+                        <input class="sign__check-box-input" type="checkbox" id="reg-email" name="reg-email" value="E-mail" checked>
                         Please contact me via e-mail
                     </label>
-                    <label class="sign__check-box" for="terms">
-                        <input class="sign__check-box-input" type="checkbox" id="terms" name="terms" value="Terms">
+                    <label class="sign__check-box" for="reg-terms">
+                        <input class="sign__check-box-input" type="checkbox" id="reg-terms" name="reg-terms" value="Terms">
                         I have read and accept the Terms and Conditions <span class="sign__check-box-span">*</span>
                     </label>
                 </div>
@@ -125,21 +125,78 @@
         </div>
 
         <header class="header">
-            <a class="header__home-link" href="#">
-                <img class="header__home-icon" src="./images/header/__home-icon.svg" alt="vipawn">
-            </a>
-            <form class="header__search-bar" action="get">
-                <button class="header__search-btn" type="submit">
-                    <img class="header__search-icon" src="./images/header/__search-icon.svg" alt="search">
+            <dic class="header__container">
+                <button class="header__burger" type="button">
+                    <span class="header__burger-layer"></span>
+                    <span class="header__burger-layer"></span>
+                    <span class="header__burger-layer"></span>
                 </button>
-                <input class="header__search-input" type="text" placeholder="Search">
-            </form>
-            <a class="header__link-loans" href="#">Loans
-                <img class="header__link-icon" src="./images/header/__loans.svg" alt="loans">
-            </a>
-            <a class="header__link-pawn" href="#">Pawn
-                <img class="header__link-icon" src="./images/header/__pawn.svg" alt="pawn">                
-            </a>
+                <a class="header__home-link" href="#">
+                    <img class="header__home-icon" src="./images/header/__logo.svg" alt="vipawn">
+                </a>
+                <form class="header__search-bar" action="get">
+                    <button class="header__search-btn" type="submit">
+                        <img class="header__search-icon" src="./images/header/__search-icon.svg" alt="search">
+                    </button>
+                    <input class="header__search-input" type="text" placeholder="Search">
+                </form>
+                <a class="header__link-loans" href="#">Loans
+                    <img class="header__link-icon" src="./images/header/__loans.svg" alt="loans">
+                </a>
+                <a class="header__link-pawn" href="#">Pawn
+                    <img class="header__link-icon" src="./images/header/__pawn.svg" alt="pawn">                
+                </a>
+                <button class="header__profile" type="button">
+                    <img class="header__profile-icon" src="./images/header/__profile.svg" alt="profile">
+                </button>
+            </dic>
+            <div class="header__burger-menu">
+                <div class="header__burger-container">
+                    <div class="header__burger-item">
+                        <div class="header__burger-page-btn">
+                            <img class="header__burger-page-img" src="./images/header/__home.svg" alt="home">
+                            <p class="header__burger-page-title">Home</p>
+                            <div class="header__burger-page-icon"></div>
+                        </div>
+                        <div class="header__burger-list">
+                            <a class="header__burger-list-link" href="#novelties">
+                                New Arrivals
+                                <span class="header__burger-list-span">67</span>
+                            </a>
+                            <a class="header__burger-list-link" href="#featured">
+                                Featured
+                                <span class="header__burger-list-span">124</span>
+                            </a>
+                            <a class="header__burger-list-link" href="#faq">
+                                FAQs
+                            </a>
+                            <a class="header__burger-list-link" href="#contact">
+                                Contacts
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header__burger-item">
+                        <div class="header__burger-page-btn">
+                            <img class="header__burger-page-img" src="./images/header/__market.svg" alt="market">
+                            <p class="header__burger-page-title">Market</p>
+                            <div class="header__burger-page-icon"></div>
+                        </div>
+                        <div class="header__burger-list">
+                            <a class="header__burger-list-link" href="#">
+                                Button
+                                <span class="header__burger-list-span">999</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header__burger-item">
+                        <div class="header__burger-page-btn">
+                            <img class="header__burger-page-img" src="./images/header/__pawn-burger.svg" alt="pawn">
+                            <p class="header__burger-page-title">Pawn</p>
+                            <span class="header__burger-page-span">Sell your item</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </header>
 
         <main class="content">
@@ -188,7 +245,7 @@
                 </div>
             </section>
 
-            <section class="novelties">
+            <section class="novelties" id="novelties">
                 <div class="novelties__text">
                     <p class="section-caption">New Arrivals</p>
                     <h2 class="section-title">Exclusive products <br class="indent"> for true high-end connoisseurs</h2>
@@ -314,7 +371,7 @@
                 <img class="brands__logo" src="./images/brands/__brand-6.svg" alt="brand">
             </section>
 
-            <section class="featured">
+            <section class="featured" id="featured">
                 <div class="featured__heading">
                     <img class="featured__heading-img" src="./images/featured/__background.png" alt="background">
                     <p class="section-caption">Featured</p>
@@ -435,7 +492,7 @@
                 </ul>
             </section>
 
-            <section class="faq">
+            <section class="faq" id="faq">
                 <div class="faq__header">
                     <p class="section-caption">Support</p>
                     <h2 class="section-title">Frequently Asked Questions</h2>
@@ -479,7 +536,7 @@
                 </ul>
             </section>
 
-            <section class="contact">
+            <section class="contact" id="contact">
                 <form class="contact__form" action="post">
                     <div class="contact__form-heading">
                         <h3 class="contact__form-title">Have any query?</h3>
@@ -501,12 +558,12 @@
                     </div>
                     <div class="contact__check-boxes">
                         <p class="contact__terms">Vipawn may keep me informed with personalized emails about products and services. See our <a class="contact__terms-link" href="#">Privacy Policy</a> for more details.</p>
-                        <label class="contact__check-box" for="email">
-                            <input class="contact__check-box-input" type="checkbox" id="email" name="email" value="E-mail" checked>
+                        <label class="contact__check-box" for="contact-email">
+                            <input class="contact__check-box-input" type="checkbox" id="contact-email" name="contact-email" value="E-mail" checked>
                             Please contact me via e-mail
                         </label>
-                        <label class="contact__check-box" for="terms">
-                            <input class="contact__check-box-input" type="checkbox" id="terms" name="terms" value="Terms">
+                        <label class="contact__check-box" for="contact-terms">
+                            <input class="contact__check-box-input" type="checkbox" id="contact-terms" name="contact-terms" value="Terms">
                             I have read and accept the Terms and Conditions <span class="contact__check-box-span">*</span>
                         </label>
                     </div>

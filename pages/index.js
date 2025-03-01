@@ -1,56 +1,75 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // [ constants ]
-    // navbar
-    const navbar = document.querySelector('.navbar');
-    // pop-up
-    const logInBtn = document.querySelector('.navbar__sign-btn_log-in');
-    const signUpBtn = document.querySelector('.navbar__sign-btn_reg-in');
-    const signContainer = document.querySelector('.sign');
-    const logInForm = document.querySelector('.sign-in');
-    const signUpForm = document.querySelector('.sign-up');
-    const hintBtn = document.querySelector('.sign__hint-btn');
-    // promo
-    const promoVideo = document.querySelector('.promo__video');
-    const promoButton = document.querySelector('.promo__button');
-    const promoButtonText = document.querySelector('.promo__button-text-span');
-    // novelties
-    const novelties = document.querySelectorAll(".novelties__card");
-    // like
-    const likeButtons = document.querySelectorAll(".featured__card-like");
-    // faq
-    const faqItems = document.querySelectorAll(".faq__item");
+document.addEventListener("DOMContentLoaded", () => {
+    // [ Elements ]
+    const navbar = document.querySelector(".navbar");
+    const signContainer = document.querySelector(".sign");
+    const logInForm = document.querySelector(".sign-in");
+    const signUpForm = document.querySelector(".sign-up");
+    const burgerButton = document.querySelector(".header__burger");
+    const burgerMenu = document.querySelector(".header__burger-menu");
+    const promoVideo = document.querySelector(".promo__video");
+    const promoButton = document.querySelector(".promo__button");
+    const promoButtonText = document.querySelector(".promo__button-text-span");
+    const logInBtn = document.querySelector(".navbar__sign-btn_log-in");
+    const signUpBtn = document.querySelector(".navbar__sign-btn_reg-in");
+    const hintBtn = document.querySelector(".sign__hint-btn");
+    const burgerBtns = [...document.querySelectorAll(".header__burger-page-btn")];
+    const burgerItems = [...document.querySelectorAll(".header__burger-item")];
+    const burgerLinks = [...document.querySelectorAll(".header__burger-list-link")];
+    const novelties = [...document.querySelectorAll(".novelties__card")];
+    const likeButtons = [...document.querySelectorAll(".featured__card-like")];
+    const faqItems = [...document.querySelectorAll(".faq__item")];
 
-    // [ functions ]
-    // pop-up
-    const showPopup = (form) => {
-        signContainer.classList.add('sign_active');
-        form.classList.add('sign_active');
-        navbar.classList.add('navbar_disactive');
+    // [ Functions ]
+    const togglePopup = (form) => {
+        signContainer.classList.toggle("sign_active", !!form);
+        logInForm.classList.remove("sign_active");
+        signUpForm.classList.remove("sign_active");
+        navbar.classList.toggle("navbar_disactive", !!form);
+        form?.classList.add("sign_active");
     };
-    const hidePopups = () => {
-        signContainer.classList.remove('sign_active');
-        logInForm.classList.remove('sign_active');
-        signUpForm.classList.remove('sign_active');
-        navbar.classList.remove('navbar_disactive');
+
+    const closeBurgerMenu = () => {
+        burgerItems.forEach((item) => item.classList.remove("header__burger-item-active"));
+        burgerMenu?.classList.remove("header__burger-active");
+        burgerButton?.classList.remove("header__burger-active");
     };
-    logInBtn?.addEventListener('click', () => {
-        hidePopups();
-        showPopup(logInForm);
+
+    // [ Event-handlers ]
+    logInBtn?.addEventListener("click", () => togglePopup(logInForm));
+    signUpBtn?.addEventListener("click", () => togglePopup(signUpForm));
+    hintBtn?.addEventListener("click", () => togglePopup(signUpForm));
+    signContainer?.addEventListener("click", (event) => {
+        if (event.target === signContainer) togglePopup(null);
     });
-    signUpBtn?.addEventListener('click', () => {
-        hidePopups();
-        showPopup(signUpForm);
+
+    // Burger
+    burgerButton?.addEventListener("click", (event) => {
+        event.stopPropagation();
+        burgerButton.classList.toggle("header__burger-active");
+        burgerMenu?.classList.toggle("header__burger-active");
     });
-    hintBtn?.addEventListener('click', () => {
-        logInForm.classList.remove('sign_active');
-        showPopup(signUpForm);
+
+    burgerBtns.forEach((btn) => {
+        btn.addEventListener("click", (event) => {
+            event.stopPropagation();
+            const parentItem = btn.closest(".header__burger-item");
+            parentItem.classList.toggle("header__burger-item-active");
+        });
     });
-    signContainer?.addEventListener('click', (event) => {
-        if (event.target === signContainer) {
-            hidePopups();
+
+    burgerLinks.forEach((link) =>
+        link.addEventListener("click", () => {
+            closeBurgerMenu();
+        })
+    );
+
+    document.addEventListener("click", (event) => {
+        if (!event.target.closest(".header__burger-item") && !event.target.closest(".header__burger-menu") && !event.target.closest(".header__burger")) {
+            closeBurgerMenu();
         }
     });
-    // promo
+
+    // Promo
     promoButton?.addEventListener("click", () => {
         if (promoVideo.paused) {
             promoVideo.play();
@@ -60,28 +79,28 @@ document.addEventListener('DOMContentLoaded', () => {
             promoButtonText.innerHTML = "Play the video";
         }
     });
-    // novelties
-    function handleNovelties() {
-        if (window.innerWidth < 1440) return;
-        
+
+    // Novelties
+    const handleNovelties = () => {
+        if (window.innerWidth < 1440) {
+            novelties.forEach((novelty) => novelty.classList.remove("novelties__card_active"));
+            return;
+        }
+
         novelties.forEach((novelty) => {
             novelty.addEventListener("click", () => {
-                if (novelty.classList.contains("novelties__card_active")) return;
-                document.querySelector(".novelties__card_active")?.classList.remove("novelties__card_active");
-                novelty.classList.add("novelties__card_active");
+                if (!novelty.classList.contains("novelties__card_active")) {
+                    document.querySelector(".novelties__card_active")?.classList.remove("novelties__card_active");
+                    novelty.classList.add("novelties__card_active");
+                }
             });
         });
-    }
-    handleNovelties();
-    window.addEventListener("resize", () => {
-        if (window.innerWidth < 1440) {
-            document.querySelectorAll(".novelties__card_active").forEach(el => el.classList.remove("novelties__card_active"));
-        } else {
-            handleNovelties();
-        }
-    });
+    };
 
-    // like
+    handleNovelties();
+    window.addEventListener("resize", handleNovelties);
+
+    // Like
     likeButtons.forEach((button) => {
         button.addEventListener("click", (event) => {
             event.preventDefault();
@@ -89,10 +108,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // faq
+    // FAQ
     faqItems.forEach((item) => {
         const question = item.querySelector(".faq__question");
-        question.addEventListener("click", () => {
+        question?.addEventListener("click", () => {
             item.classList.toggle("faq__item-active");
         });
     });

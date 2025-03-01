@@ -22,6 +22,5 @@
 @media screen and (max-width: 768px) {
     :root {
         --max-width: 408px;
-        --page-padding: 16px;
     }
 }
