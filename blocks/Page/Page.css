@@ -1,0 +1,12 @@
+.page {
+    color: var(--white);
+    font-family: var(--common-font);
+    font-weight: var(--common-weight);
+    width: 100%;
+    min-height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}

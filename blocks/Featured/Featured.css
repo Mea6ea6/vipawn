@@ -1,0 +1,203 @@
+.featured {
+    box-sizing: border-box;
+    padding: 100px 0 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.featured .section__caption {
+    margin: 0;
+}
+.featured__heading {
+    background-color: #00000060;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.featured__heading-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.featured__heading-btn {
+    color: var(--gray-400);
+    font-size: 16px;
+    line-height: 125%;
+    background-color: var(--white);
+    box-sizing: border-box;
+    padding: 10px 16px;
+    margin: 30px 0 0;
+    border-radius: 6px;
+}
+.featured__cards {
+    width: 100%;
+    margin: 30px 0 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    overflow: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.featured__cards::-webkit-scrollbar {
+    display: none;
+}
+.featured__card {
+    background-color: var(--gray-300);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    border-radius: 10px;
+}
+.featured__card-sale {
+    color: var(--gray-400);
+    font-size: 12px;
+    font-weight: var(--fat-weight);
+    line-height: 133%;
+    text-transform: uppercase;
+    background-color: var(--white);
+    box-sizing: border-box;
+    padding: 2px 10px;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    transform: translateY(-50%);
+    border-radius: 4px;
+}
+.featured__card-promo {
+    background-color: var(--gray-400);
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px 10px 0 0;
+}
+.featured__card-like {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    background-image: url('../../images/featured/__like.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 3%;
+    right: 5%;
+    transition: var(--transition-fast);
+}
+.featured__card-like_active {
+    background-image: url('../../images/featured/__like-active.svg');
+}
+.featured__card-content {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    border-radius: 0 0 10px 10px;
+}
+.featured__card-title {
+    font-size: 24px;
+    font-weight: var(--fat-weight);
+    line-height: 117%;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+.featured__card-details {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 4px;
+    margin: 10px 0 20px;
+}
+.featured__card-detail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.featured__card-detail-title {
+    color: var(--gray-100);
+    font-size: 16px;
+    line-height: 125%;
+}
+.featured__card-detail-name {
+    color: var(--white);
+    font-size: 16px;
+    line-height: 125%;
+    max-width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+.featured__card-price {
+    color: var(--gray-100);
+    font-size: 18px;
+    line-height: 122%;
+    margin: 6px 0 0;
+}
+.featured__card-price-span {
+    color: var(--white);
+}
+.featured__card-added {
+    background-color: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: auto 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--gray-100);
+    border-radius: 6px;
+}
+.featured__card-added-text {
+    font-size: 16px;
+    line-height: 125%;
+}
+.featured__card-added-btn {
+    background-color: transparent;
+    width: 16px;
+    height: 16px;
+    box-sizing: border-box;
+    padding: 4px;
+    border: 1px solid var(--white);
+    border-radius: 4px;
+}
+.featured__card-cart {
+    color: var(--gray-400);
+    font-size: 16px;
+    background-color: var(--white);
+    width: 100%;
+    margin: auto 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-sizing: border-box;
+    padding: 20px 0;
+    border-radius: 6px;
+}
+@media screen and (max-width: 1440px) {
+    .featured__cards {
+        grid-template-columns: repeat(4, 320px);
+    }
+}

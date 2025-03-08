@@ -125,7 +125,7 @@
         </div>
 
         <header class="header">
-            <dic class="header__container">
+            <div class="header__container">
                 <button class="header__burger" type="button">
                     <span class="header__burger-layer"></span>
                     <span class="header__burger-layer"></span>
@@ -149,11 +149,11 @@
                 <button class="header__profile" type="button">
                     <img class="header__profile-icon" src="./images/header/__profile.svg" alt="profile">
                 </button>
-            </dic>
+            </div>
             <div class="header__burger-menu">
                 <div class="header__burger-container">
-                    <div class="header__burger-item">
-                        <div class="header__burger-page-btn">
+                    <div class="header__burger-item header__burger-item_list">
+                        <div class="header__burger-page-btn header__burger-page-btn_list">
                             <img class="header__burger-page-img" src="./images/header/__home.svg" alt="home">
                             <p class="header__burger-page-title">Home</p>
                             <div class="header__burger-page-icon"></div>
@@ -176,24 +176,17 @@
                         </div>
                     </div>
                     <div class="header__burger-item">
-                        <div class="header__burger-page-btn">
+                        <a class="header__burger-page-btn" href="#">
                             <img class="header__burger-page-img" src="./images/header/__market.svg" alt="market">
                             <p class="header__burger-page-title">Market</p>
-                            <div class="header__burger-page-icon"></div>
-                        </div>
-                        <div class="header__burger-list">
-                            <a class="header__burger-list-link" href="#">
-                                Button
-                                <span class="header__burger-list-span">999</span>
-                            </a>
-                        </div>
+                        </a>
                     </div>
                     <div class="header__burger-item">
-                        <div class="header__burger-page-btn">
+                        <a class="header__burger-page-btn" href="#">
                             <img class="header__burger-page-img" src="./images/header/__pawn-burger.svg" alt="pawn">
                             <p class="header__burger-page-title">Pawn</p>
                             <span class="header__burger-page-span">Sell your item</span>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>

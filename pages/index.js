@@ -12,8 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const logInBtn = document.querySelector(".navbar__sign-btn_log-in");
     const signUpBtn = document.querySelector(".navbar__sign-btn_reg-in");
     const hintBtn = document.querySelector(".sign__hint-btn");
-    const burgerBtns = [...document.querySelectorAll(".header__burger-page-btn")];
-    const burgerItems = [...document.querySelectorAll(".header__burger-item")];
+    const burgerBtns = [...document.querySelectorAll(".header__burger-page-btn_list")];
+    const burgerItems = [...document.querySelectorAll(".header__burger-item_list")];
     const burgerLinks = [...document.querySelectorAll(".header__burger-list-link")];
     const novelties = [...document.querySelectorAll(".novelties__card")];
     const likeButtons = [...document.querySelectorAll(".featured__card-like")];
@@ -29,9 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const closeBurgerMenu = () => {
-        burgerItems.forEach((item) => item.classList.remove("header__burger-item-active"));
-        burgerMenu?.classList.remove("header__burger-active");
-        burgerButton?.classList.remove("header__burger-active");
+        burgerItems.forEach((item) => item.classList.remove("header__burger-item_active"));
+        burgerMenu?.classList.remove("header__burger_active");
+        burgerButton?.classList.remove("header__burger_active");
     };
 
     // [ Event-handlers ]
@@ -45,15 +45,15 @@ document.addEventListener("DOMContentLoaded", () => {
     // Burger
     burgerButton?.addEventListener("click", (event) => {
         event.stopPropagation();
-        burgerButton.classList.toggle("header__burger-active");
-        burgerMenu?.classList.toggle("header__burger-active");
+        burgerButton.classList.toggle("header__burger_active");
+        burgerMenu?.classList.toggle("header__burger_active");
     });
 
     burgerBtns.forEach((btn) => {
         btn.addEventListener("click", (event) => {
             event.stopPropagation();
-            const parentItem = btn.closest(".header__burger-item");
-            parentItem.classList.toggle("header__burger-item-active");
+            const parentItem = btn.closest(".header__burger-item_list");
+            parentItem.classList.toggle("header__burger-item_active");
         });
     });
 
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     document.addEventListener("click", (event) => {
-        if (!event.target.closest(".header__burger-item") && !event.target.closest(".header__burger-menu") && !event.target.closest(".header__burger")) {
+        if (!event.target.closest(".header__burger-item_list") && !event.target.closest(".header__burger-menu") && !event.target.closest(".header__burger")) {
             closeBurgerMenu();
         }
     });
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
     likeButtons.forEach((button) => {
         button.addEventListener("click", (event) => {
             event.preventDefault();
-            button.classList.toggle("featured__card-like-active");
+            button.classList.toggle("featured__card-like_active");
         });
     });
 
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
     faqItems.forEach((item) => {
         const question = item.querySelector(".faq__question");
         question?.addEventListener("click", () => {
-            item.classList.toggle("faq__item-active");
+            item.classList.toggle("faq__item_active");
         });
     });
 });

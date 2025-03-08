@@ -1,0 +1,112 @@
+.about {
+    width: 100%;
+    margin: 20px 0 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+.about__card {
+    background-color: var(--gray-400);
+    width: 100%;
+    min-height: 200px;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    border-radius: 10px;
+}
+.about__card-title {
+    color: var(--accent);
+    font-size: 24px;
+    font-weight: var(--fat-weight);
+    line-height: 117%;
+    margin: 0 0 16px;
+}
+.about__card-text {
+    color: var(--gray-100);
+    font-size: 16px;
+    line-height: 125%;
+    margin: 0 0 20px 0;
+}
+.about__card-link {
+    color: var(--gray-100);
+    font-size: 16px;
+    line-height: 125%;
+    margin: auto 0 8px auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.about__card-link:hover .about__card-link-span::after {
+    opacity: 1;
+}
+.about__card-link-icon {
+    height: 12px;
+    width: auto;
+}
+.about__card-link-span {
+    color: var(--white);
+    text-decoration-skip-ink: none;
+    position: relative;
+}
+.about__card-link-span::after {
+    content: '';
+    width: 100%;
+    height: 1.5px;
+    background-color: var(--white);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 4px;
+    opacity: 0;
+    transition: var(--transition-fast);
+}
+.about__card-form {
+    width: 100%;
+    margin: auto 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.about__card-input {
+    font-size: 16px;
+    line-height: 125%;
+    background-color: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border-bottom: 1px solid var(--gray-200);
+    transition: var(--transition-fast);
+}
+.about__card-input:hover {
+    border-bottom: 1px solid var(--white);
+}
+.about__card-input:focus {
+    border-bottom: 1px solid var(--white);
+}
+.about__card-btn {
+    font-size: 16px;
+    background-color: transparent;
+    box-sizing: border-box;
+    padding: 14px;
+    border-radius: 6px;
+    border: 1px solid var(--gray-200);
+}
+@media screen and (max-width: 1440px) {
+    .about {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .about__card:nth-child(3) {
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    .about {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+}

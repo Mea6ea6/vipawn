@@ -1,0 +1,205 @@
+.sign {
+    min-width: 100%;
+    min-height: 100vh;
+    background-color: #00000060;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    transform: scale(1.1);
+    opacity: 0;
+    transition: var(--transition-fast);
+    cursor: pointer;
+}
+.sign_active {
+    z-index: 999999;
+    opacity: 1;
+    transform: scale(1);
+}
+.sign__form {
+    background: var(--gray-400);
+    max-width: 460px;
+    width: 100%;
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 30px;
+    border-radius: 10px;
+    cursor: auto;
+}
+.sign__form.sign_active {
+    display: flex;
+}
+.sign__title {
+    font-size: 24px;
+    font-weight: var(--fat-weight);
+    line-height: 113%;
+}
+.sign__fields {
+    width: 100%;
+    margin: 30px 0 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.sign__field {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+.sign__field-title {
+    color: var(--gray-100);
+    font-size: 14px;
+    line-height: 122%;
+}
+.sign__field-title-span {
+    color: var(--accent);
+    margin: 0 0 0 4px;
+}
+.sign__field-input {
+    font-size: 14px;
+    line-height: 125%;
+    background-color: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 16px 10px;
+    border-bottom: 1px solid var(--gray-200);
+    transition: var(--transition-fast);
+}
+.sign__field-input:hover {
+    border-bottom: 1px solid var(--white);
+}
+.sign__field-input:focus {
+    border-bottom: 1px solid var(--white);
+}
+.sign__create-pass {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+}
+.sign__hint {
+    font-size: 14px;
+    line-height: 125%;
+    font-weight: 400;
+    margin-top: 10px;
+}
+.sign__hint-btn {
+    color: var(--accent);;
+    background-color: transparent;
+}
+.sign__hint-link {
+    color: var(--accent);
+    font-size: 14px;
+    line-height: 125%;
+    margin-top: 10px;
+}
+.sign__check-boxes {
+    width: 100%;
+    margin: 30px 0;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 12px;
+}
+.sign__terms {
+    color: var(--gray-100);
+    font-size: 14px;
+    line-height: 130%;
+}
+.sign__terms-link {
+    color: var(--accent);
+}
+.sign__check-box {
+    color: var(--gray-100);
+    font-size: 14px;
+    line-height: 125%;
+    display: flex;
+    align-items: center;
+}
+.sign__check-box:hover {
+    cursor: pointer;
+}
+.sign__check-box-input {
+    background-color: transparent;
+    width: 16px;
+    height: 16px;
+    margin: 0 10px 0 0;
+    border: 1px solid var(--gray-200);
+    border-radius: 5px;
+    display: grid;
+    place-content: center;
+    appearance: none;
+    -webkit-appearance: none;
+}
+.sign__check-box-input:hover {
+    cursor: pointer;
+}
+.sign__check-box-input:after {
+    content: "";
+    background-color: var(--gray-100);
+    width: 8px;
+    height: 8px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%, 50%);
+    border-radius: 2px;
+    transition: var(--transition-fast);
+    opacity: 0;
+}
+.sign__check-box-input:checked:after {
+    opacity: 1;
+}
+.sign__check-box-span {
+    color: var(--accent);
+    margin: 0 0 0 4px;
+}
+.sign__btn {
+    color: var(--black);
+    font-size: 16px;
+    font-weight: var(--fat-weight);
+    background-color: var(--white);
+    width: 100%;
+    padding: 16px 0;
+    border-radius: 6px;
+}
+.sign__alt {
+    width: 100%;
+    margin: 30px 0 0;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+}
+.sign__alt-title {
+    color: var(--gray-100);
+    font-size: 14px;
+    line-height: 125%;
+}
+.sign__alt-btns {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.sign__alt-btn {
+    font-size: 16px;
+    background-color: transparent;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 1px solid var(--gray-200);
+    border-radius: 6px;
+    transition: var(--transition-fast);
+}
+.sign__alt-btn:hover {
+    border: 1px solid var(--white);
+}

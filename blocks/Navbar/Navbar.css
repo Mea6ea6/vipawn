@@ -1,0 +1,115 @@
+.navbar {
+    background-color: var(--white);
+    box-sizing: border-box;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: fixed;
+    z-index: 999998;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, 0) scale(1);
+    opacity: 1;
+    transition: var(--transition-fast);
+    border-radius: 10px;
+}
+.navbar_disactive {
+    z-index: -1;
+    transform: translate(-50%, 25%) scale(0.9);
+    opacity: 0;
+}
+.navbar__logo-link {
+    background-color: transparent;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+.navbar__sign-btns {
+    background-color: var(--gray-400);
+    height: 60px;
+    box-sizing: border-box;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 6px;
+}
+.navbar__sign-btn {
+    font-size: 16px;
+    background-color: transparent;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    border: 1px solid var(--gray-200);
+    transition: var(--transition-fast);
+}
+.navbar__sign-btn:hover {
+    border: 1px solid var(--white);
+}
+.navbar__user-btns {
+    background-color: var(--gray-400);
+    height: 60px;
+    box-sizing: border-box;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-radius: 6px;
+}
+.navbar__profile-btn {
+    color: var(--white);
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+.navbar__profile-img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px 0 0;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+}
+.navbar__logout-btn {
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+}
+.navbar__logout-icon {
+    width: 100%;
+    height: auto;
+}
+.navbar__menu-btns {
+    background-color: var(--gray-400);
+    height: 60px;
+    box-sizing: border-box;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 10px;
+}
+.navbar__menu-btn {
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+@media screen and (max-width: 1440px) {
+    .navbar__sign-btns {
+        display: none;
+    }
+    .navbar__user-btns {
+        display: none;
+    }
+}

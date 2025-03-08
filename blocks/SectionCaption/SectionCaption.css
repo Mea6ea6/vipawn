@@ -1,0 +1,6 @@
+.section-caption {
+    color: var(--accent);
+    font-size: 16px;
+    line-height: 125%;
+    margin: 0 0 30px;
+}
