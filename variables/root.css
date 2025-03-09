@@ -13,6 +13,7 @@
     --max-width: 1340px;
     --transition-fast: 0.3s;
     --transition-slow: 0.9s ease-in-out;
+    --transition-very-slow: 1.5s ease-in-out;
 }
 @media screen and (max-width: 1440px) {
     :root {

@@ -88,49 +88,177 @@
                         <a class="catalog__breadcrumb" href="#">Men's watches</a>
                     </nav>
                     <h2 class="catalog__title">Rolex Watches</h2>
-                    <div class="catalog__filters-tags">
-                        <button class="catalog__filters-tag">
-                            Rolex
-                        </button>
-                        <button class="catalog__filters-tag">
-                            Sales
-                        </button>
-                        <button class="catalog__filters-tag">
-                            Cartier
-                        </button>
-                        <button class="catalog__filters-tag">
-                            Gold watches
-                        </button>
-                        <button class="catalog__filters-tag">
-                            For men
-                        </button>
-                        <button class="catalog__filters-tag">
-                            Designers
-                        </button>
-                        <button class="catalog__filters-tag">
-                            Omega
-                        </button>
-                        <button class="catalog__filters-tag">
-                            Brilliants
-                        </button>
-                        <button class="catalog__filters-tag">
-                            Jewerly
-                        </button>
-                        <button class="catalog__filters-tag">
-                            For kids
-                        </button>
-                        <button class="catalog__filters-tag">
-                            Split
-                        </button>
-                        <button class="catalog__filters-tag">
-                            Popular
-                        </button>
-                        <button class="catalog__filters-tag">
-                            Silver bracelets
-                        </button>
-                    </div>
+                    <form class="catalog__filters-tags" action="get">
+                        <input class="catalog__filters-tag" type="button" value="Rolex"></input>
+                        <input class="catalog__filters-tag" type="button" value="Sales"></input>
+                        <input class="catalog__filters-tag" type="button" value="Cartier"></input>
+                        <input class="catalog__filters-tag" type="button" value="Gold watches"></input>
+                        <input class="catalog__filters-tag" type="button" value="For men"></input>
+                        <input class="catalog__filters-tag" type="button" value="Designers"></input>
+                        <input class="catalog__filters-tag" type="button" value="Omega"></input>
+                        <input class="catalog__filters-tag" type="button" value="Brilliants"></input>
+                        <input class="catalog__filters-tag" type="button" value="Jewerly"></input>
+                        <input class="catalog__filters-tag" type="button" value="For kids"></input>
+                        <input class="catalog__filters-tag" type="button" value="Split"></input>
+                        <input class="catalog__filters-tag" type="button" value="Popular"></input>
+                        <input class="catalog__filters-tag" type="button" value="Silver bracelets"></input>
+                    </form>
                 </div>
-                <!-- Продолжать тут -->
+                <div class="catalog__container">
+                    <aside class="filters">
+                        <form class="filters__category" action="get">
+                            <div class="filters__category-heading">
+                                <h3 class="filters__category-title">Category</h3>
+                                <button class="filters__category-reset" type="reset">Reset</button>
+                            </div>
+                            <ul class="filters__list">
+                                <li class="filters__item">
+                                    <div class="filters__item-label">
+                                        <img class="filters__item-img" src="./images/filters/__watches.svg" alt="type">
+                                        <p class="filters__item-title">Watches</p>
+                                        <div class="filters__item-icon"></div>
+                                    </div>
+                                    <div class="filters__check-boxes">
+                                        <label class="filters__check-box" for="watches">
+                                            <span class="filters__check-box-span">999</span>
+                                            Watches
+                                            <input class="filters__check-box-input" type="checkbox" id="watches" name="watches" value="Watches" tabindex="-1">
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="filters__item">
+                                    <div class="filters__item-label">
+                                        <img class="filters__item-img" src="./images/filters/__jewelry.svg" alt="type">
+                                        <p class="filters__item-title">Jewelry</p>
+                                        <div class="filters__item-icon"></div>
+                                    </div>
+                                    <div class="filters__check-boxes">
+                                        <label class="filters__check-box" for="rings">
+                                            <span class="filters__check-box-span">421</span>
+                                            Rings
+                                            <input class="filters__check-box-input" type="checkbox" id="rings" name="rings" value="Rings" tabindex="-1">
+                                        </label>
+                                        <label class="filters__check-box" for="chains">
+                                            <span class="filters__check-box-span">67</span>
+                                            Chains
+                                            <input class="filters__check-box-input" type="checkbox" id="chains" name="chains" value="Chains" tabindex="-1">
+                                        </label>
+                                        <label class="filters__check-box" for="bracelets">
+                                            <span class="filters__check-box-span">233</span>
+                                            Bracelets
+                                            <input class="filters__check-box-input" type="checkbox" id="bracelets" name="bracelets" value="Bracelets" tabindex="-1">
+                                        </label>
+                                        <label class="filters__check-box" for="pendants">
+                                            <span class="filters__check-box-span">144</span>
+                                            Pendants
+                                            <input class="filters__check-box-input" type="checkbox" id="pendants" name="pendants" value="Pendants" tabindex="-1">
+                                        </label>
+                                        <label class="filters__check-box" for="necklaces">
+                                            <span class="filters__check-box-span">98</span>
+                                            Necklaces
+                                            <input class="filters__check-box-input" type="checkbox" id="necklaces" name="necklaces" value="Necklaces" tabindex="-1">
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="filters__item">
+                                    <div class="filters__item-label">
+                                        <img class="filters__item-img" src="./images/filters/__collectibles.svg" alt="type">
+                                        <p class="filters__item-title">Collectibles</p>
+                                        <div class="filters__item-icon"></div>
+                                    </div>
+                                    <div class="filters__check-boxes">
+                                        <label class="filters__check-box" for="collectibles">
+                                            <span class="filters__check-box-span">999</span>
+                                            Collectibles
+                                            <input class="filters__check-box-input" type="checkbox" id="collectibles" name="collectibles" value="Collectibles" tabindex="-1">
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="filters__item">
+                                    <div class="filters__item-label">
+                                        <img class="filters__item-img" src="./images/filters/__electronics.svg" alt="type">
+                                        <p class="filters__item-title">Electronics</p>
+                                        <div class="filters__item-icon"></div>
+                                    </div>
+                                    <div class="filters__check-boxes">
+                                        <label class="filters__check-box" for="electronics">
+                                            <span class="filters__check-box-span">999</span>
+                                            Electronics
+                                            <input class="filters__check-box-input" type="checkbox" id="electronics" name="electronics" value="Electronics" tabindex="-1">
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="filters__item">
+                                    <div class="filters__item-label">
+                                        <img class="filters__item-img" src="./images/filters/__designers.svg" alt="type">
+                                        <p class="filters__item-title">Designers</p>
+                                        <div class="filters__item-icon"></div>
+                                    </div>
+                                    <div class="filters__check-boxes">
+                                        <label class="filters__check-box" for="designers">
+                                            <span class="filters__check-box-span">999</span>
+                                            Designers
+                                            <input class="filters__check-box-input" type="checkbox" id="designers" name="designers" value="Designers" tabindex="-1">
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </form>
+                        <form class="filters__category" action="get">
+                            <div class="filters__category-heading">
+                                <h3 class="filters__category-title">Price Range</h3>
+                                <button class="filters__category-reset" type="reset">Reset</button>
+                            </div>
+                            <div class="filters__price">
+                                <div class="filters__price-sliders">
+                                    <input class="filters__price-slider" id="fromSlider" type="range" value="25" min="0" max="100"/>
+                                    <input class="filters__price-slider" id="toSlider" type="range" value="75" min="0" max="100"/>
+                                </div>
+                                <div class="filters__price-values">
+                                    <input class="filters__price-input" type="number" placeholder="from">
+                                    <input class="filters__price-input" type="number" placeholder="to">
+                                </div>
+                            </div>
+                        </form>
+                        <form class="filters__category" action="get">
+                            <div class="filters__category-heading">
+                                <h3 class="filters__category-title">Brand</h3>
+                                <button class="filters__category-reset" type="reset">Reset</button>
+                            </div>
+                            <div class="filters__brand">
+                                <input class="filters__brand-input" type="text" placeholder="Find a brand">
+                                <div class="filters__brand-list">
+                                    <label class="filters__check-box" for="Pandora">
+                                        <span class="filters__check-box-span">421</span>
+                                        Pandora
+                                        <input class="filters__check-box-input" type="checkbox" id="Pandora" name="Pandora" value="Pandora" tabindex="-1">
+                                    </label>
+                                    <label class="filters__check-box" for="Cartier">
+                                        <span class="filters__check-box-span">67</span>
+                                        Cartier
+                                        <input class="filters__check-box-input" type="checkbox" id="Cartier" name="Cartier" value="Cartier" tabindex="-1">
+                                    </label>
+                                    <label class="filters__check-box" for="Tiffany & Co.">
+                                        <span class="filters__check-box-span">233</span>
+                                        Tiffany & Co.
+                                        <input class="filters__check-box-input" type="checkbox" id="Tiffany & Co." name="Tiffany & Co." value="Tiffany & Co." tabindex="-1">
+                                    </label>
+                                    <label class="filters__check-box" for="Van Cleef & Arpels">
+                                        <span class="filters__check-box-span">144</span>
+                                        Van Cleef & Arpels
+                                        <input class="filters__check-box-input" type="checkbox" id="Van Cleef & Arpels" name="Van Cleef & Arpels" value="Van Cleef & Arpels" tabindex="-1">
+                                    </label>
+                                    <label class="filters__check-box" for="Harry Winston">
+                                        <span class="filters__check-box-span">98</span>
+                                        Harry Winston
+                                        <input class="filters__check-box-input" type="checkbox" id="Harry Winston" name="Harry Winston" value="Harry Winston" tabindex="-1">
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                    </aside>
+                    <!-- Продолжить тут -->
+                </div>
             </section>
         </main>
 

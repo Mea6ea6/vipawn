@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const burgerItems = [...document.querySelectorAll(".header__burger-item_list")];
     const burgerLinks = [...document.querySelectorAll(".header__burger-list-link")];
     const filterTags = [...document.querySelectorAll(".catalog__filters-tag")];
+    const filterLabels = [...document.querySelectorAll(".filters__item-label")];
 
     // [ Functions ]
     const closeBurgerMenu = () => {
@@ -16,6 +17,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const toggleFilterTag = (event) => {
         event.target.classList.toggle("catalog__filters-tag_active");
+    };
+
+    const toggleFilterItem = (event) => {
+        const parentItem = event.target.closest(".filters__item");
+        parentItem.classList.toggle("filters__item_active");
     };
 
     // [ Event-handlers ]
@@ -49,5 +55,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Filter Tags
     filterTags.forEach((tag) => {
         tag.addEventListener("click", toggleFilterTag);
+    });
+
+    // Filter Items
+    filterLabels.forEach((label) => {
+        label.addEventListener("click", toggleFilterItem);
     });
 });
