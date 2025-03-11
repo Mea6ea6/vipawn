@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const burgerLinks = [...document.querySelectorAll(".header__burger-list-link")];
     const filterTags = [...document.querySelectorAll(".catalog__filters-tag")];
     const filterLabels = [...document.querySelectorAll(".filters__item-label")];
+    const likeButtons = [...document.querySelectorAll(".product-card__like")]; // Добавил лайки
 
     // [ Functions ]
     const closeBurgerMenu = () => {
@@ -22,6 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const toggleFilterItem = (event) => {
         const parentItem = event.target.closest(".filters__item");
         parentItem.classList.toggle("filters__item_active");
+    };
+
+    const toggleLike = (event) => {
+        event.preventDefault(); // Предотвращает ненужное действие, например, если внутри есть ссылка
+        event.target.classList.toggle("product-card__like_active");
     };
 
     // [ Event-handlers ]
@@ -60,5 +66,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Filter Items
     filterLabels.forEach((label) => {
         label.addEventListener("click", toggleFilterItem);
+    });
+
+    // Like Buttons
+    likeButtons.forEach((button) => {
+        button.addEventListener("click", toggleLike);
     });
 });
