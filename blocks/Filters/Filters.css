@@ -9,7 +9,7 @@
   flex-direction: column;
   border-radius: 10px;
   gap: 40px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .filters__category {
   width: 100%;

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/x-icon/x-icon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./pages/product.css" />
+    <title>Product</title>
+</head>
+<body class="background">
+    <div class="page page_market">
+        <nav class="navbar">
+            <a class="navbar__logo-link" href="./index.html">
+                <img class="navbar__logo-icon" src="./images/navbar/__logo.svg" alt="vipawn">
+            </a>
+            <div class="navbar__sign-btns">
+                <button class="navbar__sign-btn navbar__sign-btn_log-in" type="button">Log in</button>
+                <button class="navbar__sign-btn navbar__sign-btn_reg-in" type="button">Sign up</button>
+            </div>
+            <div class="navbar__user-btns">
+                <a class="navbar__profile-btn" href="#">
+                    <img class="navbar__profile-img" src="./images/navbar/__user.png" alt="user">Hey, User
+                </a>
+                <button class="navbar__logout-btn" type="button">
+                    <img class="navbar__logout-icon" src="./images/navbar/__logout.svg" alt="logout">
+                </button>
+            </div>
+            <div class="navbar__menu-btns">
+                <button class="navbar__menu-btn navbar__menu-btn_filters" type="button">
+                    <img class="navbar__menu-btn-icon" src="./images/navbar/__filters.svg" alt="filters">
+                </button>
+                <a class="navbar__menu-btn" href="#">
+                    <img class="navbar__menu-btn-icon" src="./images/navbar/__like.svg" alt="like">
+                </a>
+                <a class="navbar__menu-btn" href="#">
+                    <img class="navbar__menu-btn-icon" src="./images/navbar/__cart.svg" alt="cart">
+                </a>
+            </div>
+        </nav>
+
+        <header class="header">
+            <div class="header__container">
+                <button class="header__burger" type="button">
+                    <span class="header__burger-layer"></span>
+                    <span class="header__burger-layer"></span>
+                    <span class="header__burger-layer"></span>
+                </button>
+                <a class="header__home-link" href="./index.html">
+                    <img class="header__home-icon" src="./images/header/__logo.svg" alt="vipawn">
+                </a>
+                <form class="header__search-bar" action="get">
+                    <button class="header__search-btn" type="submit">
+                        <img class="header__search-icon" src="./images/header/__search-icon.svg" alt="search">
+                    </button>
+                    <input class="header__search-input" type="text" placeholder="Search">
+                </form>
+                <a class="header__link-loans" href="#">Loans
+                    <img class="header__link-icon" src="./images/header/__loans.svg" alt="loans">
+                </a>
+                <a class="header__link-pawn" href="#">Pawn
+                    <img class="header__link-icon" src="./images/header/__pawn.svg" alt="pawn">                
+                </a>
+                <button class="header__profile" type="button">
+                    <img class="header__profile-icon" src="./images/header/__profile.svg" alt="profile">
+                </button>
+            </div>
+            <div class="header__burger-menu">
+                <div class="header__burger-container">
+                    <div class="header__burger-item header__burger-item_list">
+                        <div class="header__burger-page-btn header__burger-page-btn_list">
+                            <img class="header__burger-page-img" src="./images/header/__home.svg" alt="home">
+                            <p class="header__burger-page-title">Home</p>
+                            <div class="header__burger-page-icon"></div>
+                        </div>
+                        <div class="header__burger-list">
+                            <a class="header__burger-list-link" href="./index.html#novelties">
+                                New Arrivals
+                                <span class="header__burger-list-span">67</span>
+                            </a>
+                            <a class="header__burger-list-link" href="./index.html#featured">
+                                Featured
+                                <span class="header__burger-list-span">124</span>
+                            </a>
+                            <a class="header__burger-list-link" href="./index.html#faq">
+                                FAQs
+                            </a>
+                            <a class="header__burger-list-link" href="./index.html#contact">
+                                Contacts
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header__burger-item">
+                        <a class="header__burger-page-btn" href="#">
+                            <img class="header__burger-page-img" src="./images/header/__market.svg" alt="market">
+                            <p class="header__burger-page-title">Market</p>
+                        </a>
+                    </div>
+                    <div class="header__burger-item">
+                        <a class="header__burger-page-btn" href="#">
+                            <img class="header__burger-page-img" src="./images/header/__pawn-burger.svg" alt="pawn">
+                            <p class="header__burger-page-title">Pawn</p>
+                            <span class="header__burger-page-span">Sell your item</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="content">
+            <section class="product">
+
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__links">
+                    <a class="footer__link" href="#">Terms and conditions</a>
+                    <a class="footer__link" href="#">Privacy Policy</a>
+                </div>
+                <p class="footer__copyright">Copyright © 2025 / All Rights Reserved / Made by <span class="footer__copyright-span">SURGE</span></p>
+                <div class="footer__socials">
+                    <a class="footer__social" href="#">Instagram</a>
+                    <a class="footer__social" href="#">Facebook</a>
+                    <a class="footer__social" href="#">Telegram</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="./pages/product.js"></script>
+</html>
