@@ -1,13 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
     // [ Elements ]
+    const filtersButton = document.querySelector(".navbar__menu-btn_filters");
     const burgerButton = document.querySelector(".header__burger");
     const burgerMenu = document.querySelector(".header__burger-menu");
     const burgerBtns = [...document.querySelectorAll(".header__burger-page-btn_list")];
     const burgerItems = [...document.querySelectorAll(".header__burger-item_list")];
     const burgerLinks = [...document.querySelectorAll(".header__burger-list-link")];
     const filterTags = [...document.querySelectorAll(".catalog__filters-tag")];
+    const filtersContainer = document.querySelector(".filters");
     const filterLabels = [...document.querySelectorAll(".filters__item-label")];
-    const likeButtons = [...document.querySelectorAll(".product-card__like")]; // Добавил лайки
+    const likeButtons = [...document.querySelectorAll(".product-card__like")];
 
     // [ Functions ]
     const closeBurgerMenu = () => {
@@ -25,8 +27,12 @@ document.addEventListener("DOMContentLoaded", () => {
         parentItem.classList.toggle("filters__item_active");
     };
 
+    const toggleFilters = () => {
+        filtersContainer?.classList.toggle("filters_active");
+    };
+
     const toggleLike = (event) => {
-        event.preventDefault(); // Предотвращает ненужное действие, например, если внутри есть ссылка
+        event.preventDefault();
         event.target.classList.toggle("product-card__like_active");
     };
 
@@ -67,6 +73,9 @@ document.addEventListener("DOMContentLoaded", () => {
     filterLabels.forEach((label) => {
         label.addEventListener("click", toggleFilterItem);
     });
+
+    // Filters Button
+    filtersButton?.addEventListener("click", toggleFilters);
 
     // Like Buttons
     likeButtons.forEach((button) => {

@@ -9,6 +9,7 @@
   flex-direction: column;
   border-radius: 10px;
   gap: 40px;
+  overflow-y: scroll;
 }
 .filters__category {
   width: 100%;
@@ -261,4 +262,23 @@
 }
 .filters__brand-list::-webkit-scrollbar-corner {
   background: transparent;
+}
+@media screen and (max-width: 768px) {
+  .filters {
+    width: 100%;
+    max-height: 100vh;
+    height: 100%;
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    border-radius: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: var(--transition-fast);
+  }
+  .filters_active {
+    z-index: 999999;
+    pointer-events: all;
+    opacity: 1;
+  }
 }

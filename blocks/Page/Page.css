@@ -10,3 +10,19 @@
     flex-direction: column;
     position: relative;
 }
+.page_market .navbar {
+    display: none;
+}
+.page .navbar__menu-btn_filters {
+    display: none;
+}
+@media screen and (max-width: 1440px) {
+    .page_market .navbar {
+        display: flex;
+    }
+}
+@media screen and (max-width: 768px) {
+    .page_market .navbar__menu-btn_filters {
+        display: block;
+    }
+}
