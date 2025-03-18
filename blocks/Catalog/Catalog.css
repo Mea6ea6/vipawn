@@ -10,23 +10,6 @@
   align-items: start;
   flex-direction: column;
 }
-.catalog__breadcrumbs {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin: 0 0 20px;
-}
-.catalog__breadcrumbs-span {
-  color: var(--gray-100);
-  font-size: 16px;
-  line-height: 125%;
-}
-.catalog__breadcrumb {
-  color: var(--gray-100);
-  font-size: 16px;
-  line-height: 125%;
-}
 .catalog__title {
   font-size: 32px;
   font-weight: var(--fat-weight);

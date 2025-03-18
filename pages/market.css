@@ -7,6 +7,7 @@
 @import url("../blocks/Navbar/Navbar.css");
 @import url("../blocks/Header/Header.css");
 @import url("../blocks/Content/Content.css");
+@import url("../blocks/Breadcrumbs/Breadcrumbs.css");
 @import url("../blocks/Catalog/Catalog.css");
 @import url("../blocks/Filters/Filters.css");
 @import url("../blocks/ProductCard/ProductCard.css");
