@@ -8,35 +8,50 @@
     <title>Product</title>
 </head>
 <body class="background">
-    <div class="page page_market">
-        <nav class="navbar">
-            <a class="navbar__logo-link" href="./index.html">
-                <img class="navbar__logo-icon" src="./images/navbar/__logo.svg" alt="vipawn">
-            </a>
-            <div class="navbar__sign-btns">
-                <button class="navbar__sign-btn navbar__sign-btn_log-in" type="button">Log in</button>
-                <button class="navbar__sign-btn navbar__sign-btn_reg-in" type="button">Sign up</button>
+    <div class="page">
+        <div class="conditions">
+            <div class="conditions__form">
+                <h2 class="conditions__title">What conditions are suitable?</h2>
+                <div class="conditions__price">
+                    <img class="conditions__price-icon" src="./images/conditions/__price.svg" alt="price">
+                    <p class="conditions__price-current">$ 84 000</p>
+                    <p class="conditions__price-old">$ 92 400</p>
+                </div>
+                <div class="conditions__options">
+                    <div class="conditions__select">
+                        <input class="conditions__select-input" type="text" data-value="6 months" placeholder="6 months" readonly>
+                        <div class="conditions__select-icon"></div>
+                        <div class="conditions__select-wrapper">
+                            <div class="conditions__select-option" data-value="3 months">3 months</div>
+                            <div class="conditions__select-option" data-value="6 months">6 months</div>
+                            <div class="conditions__select-option" data-value="12 months">12 months</div>
+                        </div>
+                    </div>
+                    <div class="conditions__payment">
+                        <p class="conditions__payment-title">Pay on convenient days</p>
+                        <p class="conditions__payment-note">Without overpayment</p>
+                    </div>
+                </div>
+                <div class="conditions__progress">
+                    <div class="conditions__progress-today"></div>
+                    <div class="conditions__progress-deadline"></div>
+                </div>
+                <div class="conditions__details">
+                    <div class="conditions__details-today">
+                        <div class="conditions__details-today-bar"></div>
+                        <p class="conditions__details-label">Today</p>
+                        <p class="conditions__details-value">$ 16 800</p>
+                    </div>
+                    <div class="conditions__details-deadline">
+                        <div class="conditions__details-deadline-bar"></div>
+                        <p class="conditions__details-label">Deadline: <span class="conditions__details-date">09 / 08 / 25</span></p>
+                        <p class="conditions__details-remain">Remains to pay <span class="conditions__details-value">$ 67 800</span></p>
+                    </div>
+                </div>
+                <button class="conditions__btn" type="submit">Continue</button>
             </div>
-            <div class="navbar__user-btns">
-                <a class="navbar__profile-btn" href="#">
-                    <img class="navbar__profile-img" src="./images/navbar/__user.png" alt="user">Hey, User
-                </a>
-                <button class="navbar__logout-btn" type="button">
-                    <img class="navbar__logout-icon" src="./images/navbar/__logout.svg" alt="logout">
-                </button>
-            </div>
-            <div class="navbar__menu-btns">
-                <button class="navbar__menu-btn navbar__menu-btn_filters" type="button">
-                    <img class="navbar__menu-btn-icon" src="./images/navbar/__filters.svg" alt="filters">
-                </button>
-                <a class="navbar__menu-btn" href="#">
-                    <img class="navbar__menu-btn-icon" src="./images/navbar/__like.svg" alt="like">
-                </a>
-                <a class="navbar__menu-btn" href="#">
-                    <img class="navbar__menu-btn-icon" src="./images/navbar/__cart.svg" alt="cart">
-                </a>
-            </div>
-        </nav>
+        </div>
+        
 
         <header class="header">
             <div class="header__container">
@@ -154,7 +169,7 @@
                                 </div>
                             </div>
                             <div class="product__about">
-                                <h1 class="product__title">Submariner</h1>
+                                <h2 class="product__title">Submariner</h2>
                                 <p class="product__brand">
                                     <span class="product__brand-span">Rolex</span>
                                     by Vipawn
@@ -194,12 +209,100 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="product__pricing product__pricing_hidden">
+                            <div class="product__pricing-container">
+                                <div class="product__price">
+                                    <p class="product__price-current">$ 84 000</p>
+                                    <p class="product__price-old">$ 92 400</p>
+                                    <span class="product__price-discount">-10%</span>
+                                </div>
+                                <div class="product__installment">
+                                    <button class="product__installment-btn">
+                                        <img class="product__installment-btn-icon" src="./images/product/__installment-settings.svg" alt="settings">
+                                    </button>
+                                    <div class="product__installment-info">
+                                        <div class="product__installment-pricing">
+                                            <p class="product__installment-price">$ 16 800</p>
+                                            <img class="product__installment-ellipsis" src="./images/product/__ellipsis.svg" alt="ellipsis">
+                                            <p class="product__installment-price">$ 67 800</p>
+                                            <img class="product__installment-add-icon" src="./images/product/__add.svg" alt="ask">
+                                        </div>
+                                        <p class="product__installment-date">Layaway for up to 12 months</p>
+                                    </div>
+                                </div>
+                                <div class="product__actions">
+                                    <button class="product__actions-cart" type="button">Add to cart</button>
+                                    <button class="product__actions-buy" type="button">Buy now</button>
+                                </div>
+                            </div>
+                            <div class="product__add">
+                                <div class="product__faq">
+                                    <p class="product__faq-title">Frequently Asked Questions</p>
+                                    <div class="product__faq-list">
+                                        <a class="product__faq-link" href="#">Terms of delivery</a>
+                                        <a class="product__faq-link" href="#">Return of products</a>
+                                        <a class="product__faq-link" href="#">Payment methods</a>
+                                        <a class="product__faq-link" href="#">Refund of money</a>
+                                    </div>
+                                </div>
+                                <div class="product__delivery">
+                                    <p class="product__delivery-title">Delivery Information</p>
+                                    <div class="product__delivery-addresses">
+                                        <div class="product__delivery-address">
+                                            <img class="product__delivery-icon" src="./images/product/__point.svg" alt="point">
+                                            <div class="product__delivery-text">
+                                                <p class="product__delivery-subtitle">22 Komitas Ave.</p>
+                                                <a class="product__delivery-link" href="#">Another place</a>
+                                            </div>
+                                        </div>
+                                        <div class="product__delivery-address">
+                                            <img class="product__delivery-icon" src="./images/product/__delivery.svg" alt="delivery">
+                                            <div class="product__delivery-text">
+                                                <p class="product__delivery-subtitle">By Vipawn courier <span class="product__delivery-subtitle-span">Free</span></p>
+                                                <p class="product__delivery-caption">Will arrive on April 7</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="product__description">
                             <h3 class="product__description-title">Description</h3>
                             <div class="product__description-list">
                                 <p class="product__specifications-text">
                                     This is one of the first Professional Rolex watches, a deep-sea diving watch that has become the archetype of this category. The Oyster Perpetual Submariner watch, released in 1953, was the world's first diving wristwatch with water resistance up to 100 meters. The modern versions of the Submariner and Submariner Date watches, which represent the quintessence of advanced technologies in watchmaking, are distinguished by their characteristics that guarantee their reliability and chronometric accuracy. The Submariner watches accompany not only brave explorers of the ocean depths, but also adventurers in other equally fascinating areas. Thanks to its many fans, this iconic model has gone beyond its original purpose and gained worldwide recognition.
                                 </p>
+                                <div class="product__details product__details_hidden">
+                                    <h3 class="product__details-title">About</h3>
+                                    <ul class="product__details-list">
+                                        <li class="product__details-item">
+                                            Article Number 
+                                            <span class="product__details-value">HR13-574855</span>
+                                            <button class="product__details-copy"></button>
+                                        </li>
+                                        <li class="product__details-item">
+                                            Serial Number 
+                                            <span class="product__details-value">124060</span> 
+                                            <button class="product__details-copy"></button>
+                                        </li>
+                                        <li class="product__details-item">
+                                            Type 
+                                            <span class="product__details-value">Wrist Watch</span>
+                                        </li>
+                                        <li class="product__details-item">
+                                            Body Material 
+                                            <span class="product__details-value">Oystersteel</span>
+                                        </li>
+                                        <li class="product__details-item">
+                                            Bracelet/Strap 
+                                            <span class="product__details-value">Stainless Oyster</span>
+                                        </li>
+                                        <li class="product__details-item">
+                                            Glass 
+                                            <span class="product__details-value">Sapphire crystal with anti-reflective coating</span>
+                                        </li>
+                                    </ul>
+                                </div>
                                 <div class="product__specifications">
                                     <h3 class="product__specifications-title">Case</h3>
                                     <ul class="product__specifications-list">
@@ -257,121 +360,169 @@
                         </div>
                     </div>
                     <div class="product__pricing">
-                        <!-- Продолжить тут -->
+                        <div class="product__pricing-container">
+                            <div class="product__price">
+                                <p class="product__price-current">$ 84 000</p>
+                                <p class="product__price-old">$ 92 400</p>
+                                <span class="product__price-discount">-10%</span>
+                            </div>
+                            <div class="product__installment">
+                                <button class="product__installment-btn" type="button">
+                                    <img class="product__installment-btn-icon" src="./images/product/__installment-settings.svg" alt="settings">
+                                </button>
+                                <div class="product__installment-info">
+                                    <div class="product__installment-pricing">
+                                        <p class="product__installment-price">$ 16 800</p>
+                                        <img class="product__installment-ellipsis" src="./images/product/__ellipsis.svg" alt="ellipsis">
+                                        <p class="product__installment-price">$ 67 800</p>
+                                        <img class="product__installment-add-icon" src="./images/product/__add.svg" alt="ask">
+                                    </div>
+                                    <p class="product__installment-date">Layaway for up to 12 months</p>
+                                </div>
+                            </div>
+                            <div class="product__actions">
+                                <button class="product__actions-cart" type="button">Add to cart</button>
+                                <button class="product__actions-buy" type="button">Buy now</button>
+                            </div>
+                        </div>
+                        <div class="product__add">
+                            <div class="product__faq">
+                                <p class="product__faq-title">Frequently Asked Questions</p>
+                                <div class="product__faq-list">
+                                    <a class="product__faq-link" href="#">Terms of delivery</a>
+                                    <a class="product__faq-link" href="#">Return of products</a>
+                                    <a class="product__faq-link" href="#">Payment methods</a>
+                                    <a class="product__faq-link" href="#">Refund of money</a>
+                                </div>
+                            </div>
+                            <div class="product__delivery">
+                                <p class="product__delivery-title">Delivery Information</p>
+                                <div class="product__delivery-addresses">
+                                    <div class="product__delivery-address">
+                                        <img class="product__delivery-icon" src="./images/product/__point.svg" alt="point">
+                                        <div class="product__delivery-text">
+                                            <p class="product__delivery-subtitle">22 Komitas Ave.</p>
+                                            <a class="product__delivery-link" href="#">Another place</a>
+                                        </div>
+                                    </div>
+                                    <div class="product__delivery-address">
+                                        <img class="product__delivery-icon" src="./images/product/__delivery.svg" alt="delivery">
+                                        <div class="product__delivery-text">
+                                            <p class="product__delivery-subtitle">By Vipawn courier <span class="product__delivery-subtitle-span">Free</span></p>
+                                            <p class="product__delivery-caption">Will arrive on April 7</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="product__recommendations">
-                    <h2 class="product__recommendations-title">We also recommend</h2>
-                    <ul class="product__recommendations-list">
-                        <button class="product__recommendations-carousel-btn product__recommendations-carousel-btn_prev">
-                            <img class="product__recommendations-carousel-icon" src="./images/product/__left.svg" alt="left">
-                        </button>
-                        <button class="product__recommendations-carousel-btn product__recommendations-carousel-btn_next">
-                            <img class="product__recommendations-carousel-icon" src="./images/product/__right.svg" alt="right">
-                        </button>
-                        <article class="product-card">
-                            <p class="product-card__sale">sale</p>
-                            <a class="product-card__promo" href="./product.html">
-                                <button class="product-card__like" type="button"></button>
-                                <img class="product-card__img" src="./images/product-card/__product.png" alt="featured item">
+                <div class="product__rec">
+                    <h2 class="product__rec-title">We also recommend</h2>
+                    <ul class="product__rec-list">
+                        <article class="rec-card">
+                            <p class="rec-card__sale">sale</p>
+                            <a class="rec-card__promo" href="./product.html">
+                                <button class="rec-card__like" type="button"></button>
+                                <img class="rec-card__img" src="./images/rec-card/__product.png" alt="featured item">
                             </a>
-                            <div class="product-card__info">
-                                <h4 class="product-card__title">Sea-Dweller</h4>
-                                <div class="product-card__details">
-                                    <div class="product-card__detail">
-                                        <p class="product-card__sub-title">Brand</p>
-                                        <p class="product-card__name">Rolex</p>
+                            <div class="rec-card__info">
+                                <h4 class="rec-card__title">Sea-Dweller</h4>
+                                <div class="rec-card__details">
+                                    <div class="rec-card__detail">
+                                        <p class="rec-card__sub-title">Brand</p>
+                                        <p class="rec-card__name">Rolex</p>
                                     </div>
-                                    <div class="product-card__detail">
-                                        <p class="product-card__sub-title">Series</p>
-                                        <p class="product-card__name">Oyster Perpetual</p>
+                                    <div class="rec-card__detail">
+                                        <p class="rec-card__sub-title">Series</p>
+                                        <p class="rec-card__name">Oyster Perpetual</p>
                                     </div>
-                                    <p class="product-card__price">
+                                    <p class="rec-card__price">
                                         $ 85 690
-                                        <span class="product-card__price-old">$ 93 420</span>
-                                        <span class="product-card__discount">—30%</span>
+                                        <span class="rec-card__price-old">$ 93 420</span>
+                                        <span class="rec-card__discount">—30%</span>
                                     </p>
                                 </div>
-                                <div class="product-card__added">
-                                    <div class="product-card__added-text">Added</div>
-                                    <button class="product-card__added-btn" type="button">
-                                        <img class="product-card__added-icon" src="./images/product-card/__delete.svg" alt="cart">
+                                <div class="rec-card__added">
+                                    <div class="rec-card__added-text">Added</div>
+                                    <button class="rec-card__added-btn" type="button">
+                                        <img class="rec-card__added-icon" src="./images/rec-card/__delete.svg" alt="cart">
                                     </button>
                                 </div>
                             </div>
                         </article>
-                        <article class="product-card">
-                            <a class="product-card__promo" href="./product.html">
-                                <button class="product-card__like" type="button"></button>
-                                <img class="product-card__img" src="./images/product-card/__product.png" alt="featured item">
+                        <article class="rec-card">
+                            <a class="rec-card__promo" href="./product.html">
+                                <button class="rec-card__like" type="button"></button>
+                                <img class="rec-card__img" src="./images/rec-card/__product.png" alt="featured item">
                             </a>
-                            <div class="product-card__info">
-                                <h4 class="product-card__title">Sea-Dweller</h4>
-                                <div class="product-card__details">
-                                    <div class="product-card__detail">
-                                        <p class="product-card__sub-title">Brand</p>
-                                        <p class="product-card__name">Rolex</p>
+                            <div class="rec-card__info">
+                                <h4 class="rec-card__title">Sea-Dweller</h4>
+                                <div class="rec-card__details">
+                                    <div class="rec-card__detail">
+                                        <p class="rec-card__sub-title">Brand</p>
+                                        <p class="rec-card__name">Rolex</p>
                                     </div>
-                                    <div class="product-card__detail">
-                                        <p class="product-card__sub-title">Series</p>
-                                        <p class="product-card__name">Oyster Perpetual</p>
+                                    <div class="rec-card__detail">
+                                        <p class="rec-card__sub-title">Series</p>
+                                        <p class="rec-card__name">Oyster Perpetual</p>
                                     </div>
-                                    <p class="product-card__price">
+                                    <p class="rec-card__price">
                                         $ 85 690
                                     </p>
                                 </div>
-                                <button class="product-card__cart" type="button">Add to cart
-                                    <img class="product-card__cart-icon" src="./images/product-card/__cart.svg" alt="cart">
+                                <button class="rec-card__cart" type="button">Add to cart
+                                    <img class="rec-card__cart-icon" src="./images/rec-card/__cart.svg" alt="cart">
                                 </button>
                             </div>
                         </article>
-                        <article class="product-card">
-                            <a class="product-card__promo" href="./product.html">
-                                <button class="product-card__like" type="button"></button>
-                                <img class="product-card__img" src="./images/product-card/__product.png" alt="featured item">
+                        <article class="rec-card">
+                            <a class="rec-card__promo" href="./product.html">
+                                <button class="rec-card__like" type="button"></button>
+                                <img class="rec-card__img" src="./images/rec-card/__product.png" alt="featured item">
                             </a>
-                            <div class="product-card__info">
-                                <h4 class="product-card__title">Sea-Dweller</h4>
-                                <div class="product-card__details">
-                                    <div class="product-card__detail">
-                                        <p class="product-card__sub-title">Brand</p>
-                                        <p class="product-card__name">Rolex</p>
+                            <div class="rec-card__info">
+                                <h4 class="rec-card__title">Sea-Dweller</h4>
+                                <div class="rec-card__details">
+                                    <div class="rec-card__detail">
+                                        <p class="rec-card__sub-title">Brand</p>
+                                        <p class="rec-card__name">Rolex</p>
                                     </div>
-                                    <div class="product-card__detail">
-                                        <p class="product-card__sub-title">Series</p>
-                                        <p class="product-card__name">Oyster Perpetual</p>
+                                    <div class="rec-card__detail">
+                                        <p class="rec-card__sub-title">Series</p>
+                                        <p class="rec-card__name">Oyster Perpetual</p>
                                     </div>
-                                    <p class="product-card__price">
+                                    <p class="rec-card__price">
                                         $ 85 690
                                     </p>
                                 </div>
-                                <button class="product-card__cart" type="button">Add to cart
-                                    <img class="product-card__cart-icon" src="./images/product-card/__cart.svg" alt="cart">
+                                <button class="rec-card__cart" type="button">Add to cart
+                                    <img class="rec-card__cart-icon" src="./images/rec-card/__cart.svg" alt="cart">
                                 </button>
                             </div>
                         </article>
-                        <article class="product-card">
-                            <a class="product-card__promo" href="./product.html">
-                                <button class="product-card__like" type="button"></button>
-                                <img class="product-card__img" src="./images/product-card/__product.png" alt="featured item">
+                        <article class="rec-card">
+                            <a class="rec-card__promo" href="./product.html">
+                                <button class="rec-card__like" type="button"></button>
+                                <img class="rec-card__img" src="./images/rec-card/__product.png" alt="featured item">
                             </a>
-                            <div class="product-card__info">
-                                <h4 class="product-card__title">Sea-Dweller</h4>
-                                <div class="product-card__details">
-                                    <div class="product-card__detail">
-                                        <p class="product-card__sub-title">Brand</p>
-                                        <p class="product-card__name">Rolex</p>
+                            <div class="rec-card__info">
+                                <h4 class="rec-card__title">Sea-Dweller</h4>
+                                <div class="rec-card__details">
+                                    <div class="rec-card__detail">
+                                        <p class="rec-card__sub-title">Brand</p>
+                                        <p class="rec-card__name">Rolex</p>
                                     </div>
-                                    <div class="product-card__detail">
-                                        <p class="product-card__sub-title">Series</p>
-                                        <p class="product-card__name">Oyster Perpetual</p>
+                                    <div class="rec-card__detail">
+                                        <p class="rec-card__sub-title">Series</p>
+                                        <p class="rec-card__name">Oyster Perpetual</p>
                                     </div>
-                                    <p class="product-card__price">
+                                    <p class="rec-card__price">
                                         $ 85 690
                                     </p>
                                 </div>
-                                <button class="product-card__cart" type="button">Add to cart
-                                    <img class="product-card__cart-icon" src="./images/product-card/__cart.svg" alt="cart">
+                                <button class="rec-card__cart" type="button">Add to cart
+                                    <img class="rec-card__cart-icon" src="./images/rec-card/__cart.svg" alt="cart">
                                 </button>
                             </div>
                         </article>

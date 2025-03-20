@@ -1,0 +1,193 @@
+.conditions {
+    min-width: 100%;
+    min-height: 100vh;
+    background-color: #00000060;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    transform: scale(1.1);
+    opacity: 0;
+    transition: var(--transition-fast);
+    cursor: pointer;
+}
+.conditions_active {
+    z-index: 999999;
+    opacity: 1;
+    transform: scale(1);
+}
+.conditions__form {
+    background-color: var(--gray-400);
+    max-width: 440px;
+    width: 100%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 30px;
+    cursor: auto;
+}
+.conditions__title {
+    font-size: 24px;
+    font-weight: var(--fat-weight);
+    line-height: 117%;
+    margin: 0 0 10px;
+}
+.conditions__price {
+    display: flex;
+    align-items: center;
+    margin: 0 0 20px;
+}
+.conditions__price-icon {
+    margin: 0 10px 0 0;
+}
+.conditions__price-current {
+    font-size: 16px;
+    font-weight: var(--fat-weight);
+    line-height: 117%;
+    margin: 0 4px 0 0;
+}
+.conditions__price-old {
+    color: var(--gray-100);
+    font-size: 16px;
+    line-height: 117%;
+    text-decoration: line-through;
+}
+.conditions__options {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin: 0 0 20px;
+}
+.conditions__select {
+    width: 150px;
+    box-sizing: border-box;
+    padding: 15px 20px;
+    display: flex;
+    position: relative;
+    border: 1px solid var(--gray-200);
+    border-radius: 6px;
+    cursor: pointer;
+}
+.conditions__select:has(.conditions__select-wrapper_active) .conditions__select-icon {
+    background-image: url('../../images/conditions/__close.svg');
+}
+.conditions__select-input {
+    color: var(--white);
+    font-size: 14px;
+    font-weight: var(--fat-weight);
+    background-color: transparent;
+    width: 100%;
+    cursor: pointer;
+}
+.conditions__select-input::placeholder {
+    color: var(--white);
+}
+.conditions__select-icon {
+    background-image: url('../../images/conditions/__open.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 14px;
+    min-height: 14px;
+    transition: var(--transition-fast);
+}
+.conditions__select-wrapper {
+    background-color: var(--gray-400);
+    width: 150px;
+    position: absolute;
+    z-index: -1;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid var(--gray-200);
+    border-radius: 6px;
+    box-shadow: 0 0 4px 0 #00000099;
+    opacity: 0;
+    transition: var(--transition-fast);
+}
+.conditions__select-wrapper_active {
+    z-index: 999999;
+    opacity: 1;
+}
+.conditions__select-option {
+    font-size: 14px;
+    font-weight: var(--fat-weight);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 20px;
+    transition: var(--transition-fast);
+    cursor: pointer;
+}
+.conditions__select-option:hover {
+    background-color: var(--gray-300);
+}
+.conditions__payment {
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    gap: 10px;
+}
+.conditions__payment-title {
+    font-size: 14px;
+}
+.conditions__payment-note {
+    color: var(--accent);
+    font-size: 14px;
+}
+.conditions__details {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin: 0 0 20px;
+}
+.conditions__details-today {
+    width: 24%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+}
+.conditions__details-today-bar {
+    background-color: var(--white);
+    width: 100%;
+    height: 5px;
+    border-radius: 6px;
+}
+.conditions__details-label {
+    color: var(--gray-100);
+    font-size: 14px;
+}
+.conditions__details-value {
+    color: var(--white);
+}
+.conditions__details-deadline {
+    width: 74%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+}
+.conditions__details-deadline-bar {
+    background-color: var(--gray-300);
+    width: 100%;
+    height: 5px;
+    border-radius: 6px;
+}
+.conditions__details-remain {
+    color: var(--gray-100);
+}
+.conditions__btn {
+    color: var(--gray-400);
+    font-size: 16px;
+    background-color: var(--white);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 0;
+    border-radius: 6px;
+}
