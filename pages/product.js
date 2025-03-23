@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const conditionsPopup = document.querySelector(".conditions");
     const conditionsBtn = document.querySelector(".conditions__btn");
     const installmentBtns = [...document.querySelectorAll(".product__installment-btn")];
+    const detailCopyButtons = [...document.querySelectorAll(".product__details-copy-btn")];
 
     // [ Functions ]
     const closeBurgerMenu = () => {
@@ -47,6 +48,26 @@ document.addEventListener("DOMContentLoaded", () => {
         popup.classList.toggle("conditions_active", state);
     };
 
+    const handleDetailCopy = (event) => {
+        const button = event.currentTarget;
+        const container = button.closest(".product__details-copy");
+        const valueEl = container.querySelector(".product__details-value");
+        const tooltip = container.querySelector(".product__details-tooltip");
+
+        if (valueEl && tooltip) {
+            navigator.clipboard.writeText(valueEl.textContent.trim())
+                .then(() => {
+                    tooltip.classList.add("product__details-tooltip_visible");
+                    setTimeout(() => {
+                        tooltip.classList.remove("product__details-tooltip_visible");
+                    }, 1500);
+                })
+                .catch((err) => {
+                    console.error("Copy failed:", err);
+                });
+        }
+    };
+
     // [ Event-handlers ]
     burgerButton?.addEventListener("click", (event) => {
         event.stopPropagation();
@@ -64,9 +85,11 @@ document.addEventListener("DOMContentLoaded", () => {
     burgerLinks.forEach((link) => link.addEventListener("click", closeBurgerMenu));
 
     document.addEventListener("click", (event) => {
-        if (!event.target.closest(".header__burger-item_list") && 
-            !event.target.closest(".header__burger-menu") && 
-            !event.target.closest(".header__burger")) {
+        if (
+            !event.target.closest(".header__burger-item_list") &&
+            !event.target.closest(".header__burger-menu") &&
+            !event.target.closest(".header__burger")
+        ) {
             closeBurgerMenu();
         }
     });
@@ -83,7 +106,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    likeButton?.addEventListener("click", () => likeButton.classList.toggle("product__heading-btn_like_active"));
+    likeButton?.addEventListener("click", () => {
+        likeButton.classList.toggle("product__heading-btn_like_active");
+    });
 
     likeButtons.forEach((button) => button.addEventListener("click", toggleLike));
 
@@ -106,5 +131,9 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!event.target.closest(".conditions__select")) {
             closeDropdown();
         }
+    });
+
+    detailCopyButtons.forEach((btn) => {
+        btn.addEventListener("click", handleDetailCopy);
     });
 });

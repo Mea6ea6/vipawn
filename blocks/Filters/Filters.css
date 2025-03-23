@@ -158,9 +158,7 @@
   background-color: var(--gray-100);
   width: 10px;
   height: 10px;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%, 50%);
+  inset: 0;
   border-radius: 2px;
   opacity: 0;
   transition: var(--transition-fast);

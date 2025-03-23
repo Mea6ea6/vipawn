@@ -145,12 +145,10 @@
     background-color: var(--gray-100);
     width: 8px;
     height: 8px;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%, 50%);
+    inset: 0;
     border-radius: 2px;
-    transition: var(--transition-fast);
     opacity: 0;
+    transition: var(--transition-fast);
 }
 .sign__check-box-input:checked:after {
     opacity: 1;

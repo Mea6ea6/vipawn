@@ -100,7 +100,136 @@
         </header>
 
         <main class="content">
-            <!-- Продолжить -->
+            <section class="cart">
+                <div class="cart__content">
+                    <div class="cart__heading">
+                        <h1 class="cart__title">Your Cart</h1>
+                        <span class="cart__title-span">3 Items</span>
+                    </div>
+                    <p class="cart__subtitle">Check your order and make a purchase in one step.</p>
+                    <div class="cart__delivery">
+                        <h3 class="cart__delivery-title">Delivery Information</h3>
+                        <div class="cart__delivery-info">
+                            <div class="cart__delivery-item">
+                                <div class="cart__delivery-text">
+                                    <img class="cart__delivery-icon" src="./images/cart/__delivery.svg" alt="delivery">
+                                    <p class="cart__delivery-subtitle">By Vipawn courier</p>
+                                </div>
+                                <button class="cart__delivery-btn" type="button">
+                                    Will arrive on April 7
+                                    <img class="cart__delivery-edit" src="./images/cart/__edit.svg" alt="edit">
+                                </button>
+                            </div>
+                            <div class="cart__delivery-item">
+                                <div class="cart__delivery-text">
+                                    <img class="cart__delivery-icon" src="./images/cart/__delivery.svg" alt="delivery">
+                                    <p class="cart__delivery-subtitle">Address</p>
+                                </div>
+                                <button class="cart__delivery-btn" type="button">
+                                    22 Komitas Ave.
+                                    <img class="cart__delivery-edit" src="./images/cart/__edit.svg" alt="edit">
+                                </button>
+                            </div>
+                            <div class="cart__delivery-item">
+                                <div class="cart__delivery-text">
+                                    <img class="cart__delivery-icon" src="./images/cart/__delivery.svg" alt="delivery">
+                                    <p class="cart__delivery-subtitle">Recipient</p>
+                                </div>
+                                <button class="cart__delivery-btn" type="button">
+                                    Khrimyan Arev, +374 93 501380
+                                    <img class="cart__delivery-edit" src="./images/cart/__edit.svg" alt="edit">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart__items">
+                        <div class="cart__actions">
+                            <label class="cart__check-box" for="items">
+                              <input class="cart__check-box-input" type="checkbox" id="items" name="items" value="Items" >
+                              Select all
+                            </label>
+                            <button class="cart__delete-selected" type="button">
+                                <img class="cart__delete-selected-icon" src="./images/cart/__delete.svg" alt="delete">
+                                Delete selected ones
+                            </button>
+                        </div>
+                        <article class="cart-item">
+                            <input class="cart-item__check-box-input" type="checkbox" value="Item-1">
+                            <a class="cart-item__promo" href="./product.html">
+                                <img class="cart-item__image" src="./images/cart-item/__photo.png" alt="Submariner">
+                            </a>
+                            <div class="cart-item__block">
+                                <div class="cart-item__info">
+                                    <h3 class="cart-item__title">Submariner</h3>
+                                    <div class="cart-item__code">
+                                        <span class="cart-item__code-tooltip">Copied</span>
+                                        <p class="cart-item__code-value">HR13-574855</p>
+                                        <button class="cart-item__code-copy" type="button"></button>
+                                    </div>
+                                </div>
+                                <div class="cart-item__actions">
+                                  <button class="cart-item__like-btn" type="button"></button>
+                                  <button class="cart-item__delete-btn" type="button"></button>
+                                </div>
+                            </div>
+                            <div class="cart-item__price">
+                              <p class="cart-item__price-current">$ 84 000</p>
+                              <p class="cart-item__price-old">$ 92 400</p>
+                              <span class="cart-item__discount">-10%</span>
+                            </div>
+                        </article>
+                        <article class="cart-item">
+                            <input class="cart-item__check-box-input" type="checkbox" value="Item-2">
+                            <a class="cart-item__promo" href="./product.html">
+                                <img class="cart-item__image" src="./images/cart-item/__photo.png" alt="Submariner">
+                            </a>
+                            <div class="cart-item__block">
+                                <div class="cart-item__info">
+                                    <h3 class="cart-item__title">Submariner</h3>
+                                    <div class="cart-item__code">
+                                        <span class="cart-item__code-tooltip">Copied</span>
+                                        <p class="cart-item__code-value">HR13-574855</p>
+                                        <button class="cart-item__code-copy" type="button"></button>
+                                    </div>
+                                </div>
+                                <div class="cart-item__actions">
+                                  <button class="cart-item__like-btn" type="button"></button>
+                                  <button class="cart-item__delete-btn" type="button"></button>
+                                </div>
+                            </div>
+                            <div class="cart-item__price">
+                              <p class="cart-item__price-current">$ 84 000</p>
+                            </div>
+                        </article>
+                        <article class="cart-item">
+                            <input class="cart-item__check-box-input" type="checkbox" value="Item-3">
+                            <a class="cart-item__promo" href="./product.html">
+                                <img class="cart-item__image" src="./images/cart-item/__photo.png" alt="Submariner">
+                            </a>
+                            <div class="cart-item__block">
+                                <div class="cart-item__info">
+                                    <h3 class="cart-item__title">Submariner</h3>
+                                    <div class="cart-item__code">
+                                        <span class="cart-item__code-tooltip">Copied</span>
+                                        <p class="cart-item__code-value">HR13-574855</p>
+                                        <button class="cart-item__code-copy" type="button"></button>
+                                    </div>
+                                </div>
+                                <div class="cart-item__actions">
+                                  <button class="cart-item__like-btn" type="button"></button>
+                                  <button class="cart-item__delete-btn" type="button"></button>
+                                </div>
+                            </div>
+                            <div class="cart-item__price">
+                              <p class="cart-item__price-current">$ 84 000</p>
+                              <p class="cart-item__price-old">$ 92 400</p>
+                              <span class="cart-item__discount">-10%</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="cart__summary"></div>
+            </section>
         </main>
 
         <footer class="footer">
