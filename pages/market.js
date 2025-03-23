@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const filtersContainer = document.querySelector(".filters");
     const filterLabels = [...document.querySelectorAll(".filters__item-label")];
     const likeButtons = [...document.querySelectorAll(".product-card__like")];
+    const filtersSaveBtn = document.querySelector(".filters__save-btn");
+    const navbar = document.querySelector(".navbar"); // <-- добавлено
 
     // [ Functions ]
     const closeBurgerMenu = () => {
@@ -29,6 +31,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const toggleFilters = () => {
         filtersContainer?.classList.toggle("filters_active");
+        navbar?.classList.toggle("navbar_disactive");
+    };
+
+    const closeFilters = () => {
+        filtersContainer?.classList.remove("filters_active");
+        navbar?.classList.remove("navbar_disactive");
     };
 
     const toggleLike = (event) => {
@@ -59,7 +67,11 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     document.addEventListener("click", (event) => {
-        if (!event.target.closest(".header__burger-item_list") && !event.target.closest(".header__burger-menu") && !event.target.closest(".header__burger")) {
+        if (
+            !event.target.closest(".header__burger-item_list") &&
+            !event.target.closest(".header__burger-menu") &&
+            !event.target.closest(".header__burger")
+        ) {
             closeBurgerMenu();
         }
     });
@@ -76,6 +88,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Filters Button
     filtersButton?.addEventListener("click", toggleFilters);
+
+    // Filters Save Button
+    filtersSaveBtn?.addEventListener("click", closeFilters);
 
     // Like Buttons
     likeButtons.forEach((button) => {

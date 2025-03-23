@@ -12,7 +12,7 @@
 }
 .catalog__title {
   font-size: 32px;
-  font-weight: var(--fat-weight);
+  font-weight: var(--bold-weight);
 }
 .catalog__filters-tags {
   width: 100%;

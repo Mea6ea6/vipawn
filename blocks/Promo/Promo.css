@@ -24,13 +24,13 @@
 .promo__title {
     font-family: var(--heading-font);
     font-size: 120px;
-    font-weight: 500;
+    font-weight: var(--medium-weight);
     text-transform: uppercase;
     margin: auto 0 30px;
 }
 .promo__caption {
     font-size: 12px;
-    font-weight: var(--fat-weight);
+    font-weight: var(--bold-weight);
     line-height: 133%;
     text-transform: uppercase;
     margin: 0 0 auto;

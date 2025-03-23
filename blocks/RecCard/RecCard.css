@@ -11,7 +11,7 @@
 .rec-card__sale {
   color: var(--gray-400);
   font-size: 12px;
-  font-weight: var(--fat-weight);
+  font-weight: var(--bold-weight);
   line-height: 133%;
   text-transform: uppercase;
   background-color: var(--white);
@@ -60,7 +60,7 @@
 }
 .rec-card__title {
   font-size: 24px;
-  font-weight: var(--fat-weight);
+  font-weight: var(--bold-weight);
   line-height: 117%;
   max-width: 100%;
   margin: 0 0 10px;
@@ -119,6 +119,7 @@
 }
 .rec-card__added-text {
   font-size: 16px;
+  font-weight: var(--medium-weight);
   line-height: 125%;
 }
 .rec-card__added-btn {
@@ -133,6 +134,7 @@
 .rec-card__cart {
   color: var(--gray-400);
   font-size: 16px;
+  font-weight: var(--medium-weight);
   background-color: var(--white);
   width: 100%;
   margin: auto 0 0;

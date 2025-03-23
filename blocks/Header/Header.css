@@ -83,6 +83,7 @@
 }
 .header__link-loans {
     font-size: 16px;
+    font-weight: var(--medium-weight);
     height: 100%;
     box-sizing: border-box;
     padding: 0 18px;
@@ -95,6 +96,7 @@
 .header__link-pawn {
     color: var(--black);
     font-size: 16px;
+    font-weight: var(--medium-weight);
     background-color: var(--white);
     height: 100%;
     box-sizing: border-box;
@@ -203,7 +205,7 @@
 .header__burger-list-span {
     color: var(--gray-400);
     font-size: 12px;
-    font-weight: var(--fat-weight);
+    font-weight: var(--bold-weight);
     line-height: 133%;
     text-align: center;
     background-color: var(--white);
@@ -214,7 +216,7 @@
 .header__burger-page-span {
     color: var(--gray-400);
     font-size: 12px;
-    font-weight: var(--fat-weight);
+    font-weight: var(--bold-weight);
     line-height: 133%;
     text-align: center;
     text-transform: uppercase;

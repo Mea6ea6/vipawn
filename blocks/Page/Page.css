@@ -1,7 +1,7 @@
 .page {
     color: var(--white);
     font-family: var(--common-font);
-    font-weight: var(--common-weight);
+    font-weight: var(--regular-weight);
     width: 100%;
     min-height: 100%;
     margin: 0 auto;

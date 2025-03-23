@@ -36,7 +36,7 @@
 }
 .sign__title {
     font-size: 24px;
-    font-weight: var(--fat-weight);
+    font-weight: var(--medium-weight);
     line-height: 113%;
 }
 .sign__fields {
@@ -162,7 +162,7 @@
 .sign__btn {
     color: var(--black);
     font-size: 16px;
-    font-weight: var(--fat-weight);
+    font-weight: var(--bold-weight);
     background-color: var(--white);
     width: 100%;
     padding: 16px 0;

@@ -1,5 +1,5 @@
 .filters {
-  background-color: var(--gray-400);
+  background-color: var(--black);
   width: 100%;
   max-height: fit-content;
   box-sizing: border-box;
@@ -10,9 +10,11 @@
   border-radius: 10px;
   gap: 40px;
   overflow-y: auto;
+  transition: var(--transition-fast);
 }
 .filters__category {
   width: 100%;
+  max-width: var(--max-width);
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -127,7 +129,7 @@
 .filters__check-box-span {
   color: var(--gray-100);
   font-size: 12px;
-  font-weight: var(--fat-weight);
+  font-weight: var(--bold-weight);
   text-transform: uppercase;
   background-color: var(--gray-300);
   width: 40px;
@@ -263,9 +265,21 @@
 .filters__brand-list::-webkit-scrollbar-corner {
   background: transparent;
 }
+.filters__save-btn {
+  color: var(--gray-400);
+  font-size: 16px;
+  font-weight: var(--medium-weight);
+  text-align: center;
+  background-color: var(--accent);
+  width: 100%;
+  max-width: var(--max-width);
+  box-sizing: border-box;
+  padding: 24px 0;
+  display: none;
+  border-radius: 6px;  
+}
 @media screen and (max-width: 768px) {
   .filters {
-    width: 100%;
     max-height: 100vh;
     height: 100%;
     position: fixed;
@@ -274,11 +288,15 @@
     border-radius: 0;
     pointer-events: none;
     opacity: 0;
-    transition: var(--transition-fast);
   }
   .filters_active {
     z-index: 999999;
     pointer-events: all;
     opacity: 1;
   }
+}
+@media screen and (max-width: 768px) {
+    .filters__save-btn {
+      display: block;
+    }
 }

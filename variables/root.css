@@ -1,10 +1,11 @@
 :root {
     --common-font: 'Roboto';
     --heading-font: 'Playfair Display';
-    --common-weight: 400;
-    --fat-weight: 700;
+    --regular-weight: 400;
+    --medium-weight: 500;
+    --bold-weight: 700;
     --accent: #f6c669;
-    --black: #0d0d0d;
+    --black: #131313;
     --white: #fff;
     --gray-100: #ababab;
     --gray-200: #4c4c4c;

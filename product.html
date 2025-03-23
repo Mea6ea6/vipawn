@@ -9,6 +9,28 @@
 </head>
 <body class="background">
     <div class="page">
+        <nav class="navbar">
+            <a class="navbar__logo-link" href="./index.html">
+                <img class="navbar__logo-icon" src="./images/navbar/__logo.svg" alt="vipawn">
+            </a>
+            <div class="navbar__user-btns">
+                <a class="navbar__profile-btn" href="#">
+                    <img class="navbar__profile-img" src="./images/navbar/__user.png" alt="user">Hey, User
+                </a>
+                <button class="navbar__logout-btn" type="button">
+                    <img class="navbar__logout-icon" src="./images/navbar/__logout.svg" alt="logout">
+                </button>
+            </div>
+            <div class="navbar__menu-btns">
+                <a class="navbar__menu-btn" href="#">
+                    <img class="navbar__menu-btn-icon" src="./images/navbar/__like.svg" alt="like">
+                </a>
+                <a class="navbar__menu-btn" href="./cart.html">
+                    <img class="navbar__menu-btn-icon" src="./images/navbar/__cart.svg" alt="cart">
+                </a>
+            </div>
+        </nav>
+
         <div class="conditions">
             <div class="conditions__form">
                 <h2 class="conditions__title">What conditions are suitable?</h2>
@@ -397,19 +419,35 @@
                             </div>
                             <div class="product__delivery">
                                 <p class="product__delivery-title">Delivery Information</p>
-                                <div class="product__delivery-addresses">
-                                    <div class="product__delivery-address">
-                                        <img class="product__delivery-icon" src="./images/product/__point.svg" alt="point">
-                                        <div class="product__delivery-text">
-                                            <p class="product__delivery-subtitle">22 Komitas Ave.</p>
-                                            <a class="product__delivery-link" href="#">Another place</a>
-                                        </div>
-                                    </div>
-                                    <div class="product__delivery-address">
+                                <div class="product__delivery-info">
+                                    <div class="product__delivery-item">
                                         <img class="product__delivery-icon" src="./images/product/__delivery.svg" alt="delivery">
                                         <div class="product__delivery-text">
                                             <p class="product__delivery-subtitle">By Vipawn courier <span class="product__delivery-subtitle-span">Free</span></p>
-                                            <p class="product__delivery-caption">Will arrive on April 7</p>
+                                            <button class="product__delivery-btn" type="button">
+                                                Will arrive on April 7
+                                                <img class="product__delivery-edit" src="./images/product/__edit.svg" alt="edit">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="product__delivery-item">
+                                        <img class="product__delivery-icon" src="./images/product/__point.svg" alt="point">
+                                        <div class="product__delivery-text">
+                                            <p class="product__delivery-subtitle">22 Komitas Ave.</p>
+                                            <button class="product__delivery-btn" type="button">
+                                                Another place
+                                                <img class="product__delivery-edit" src="./images/product/__edit.svg" alt="edit">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="product__delivery-item">
+                                        <img class="product__delivery-icon" src="./images/product/__point.svg" alt="point">
+                                        <div class="product__delivery-text">
+                                            <p class="product__delivery-subtitle">Recipient</p>
+                                            <button class="product__delivery-btn" type="button">
+                                                Khrimyan Arev, +374 93 501380
+                                                <img class="product__delivery-edit" src="./images/product/__edit.svg" alt="edit">
+                                            </button>
                                         </div>
                                     </div>
                                 </div>

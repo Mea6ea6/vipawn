@@ -31,9 +31,10 @@
     cursor: auto;
 }
 .conditions__title {
-    font-size: 24px;
-    font-weight: var(--fat-weight);
+    font-size: 16px;
+    font-weight: var(--bold-weight);
     line-height: 117%;
+    text-transform: uppercase;
     margin: 0 0 10px;
 }
 .conditions__price {
@@ -46,7 +47,7 @@
 }
 .conditions__price-current {
     font-size: 16px;
-    font-weight: var(--fat-weight);
+    font-weight: var(--bold-weight);
     line-height: 117%;
     margin: 0 4px 0 0;
 }
@@ -79,7 +80,7 @@
 .conditions__select-input {
     color: var(--white);
     font-size: 14px;
-    font-weight: var(--fat-weight);
+    font-weight: var(--medium-weight);
     background-color: transparent;
     width: 100%;
     cursor: pointer;
@@ -116,7 +117,7 @@
 }
 .conditions__select-option {
     font-size: 14px;
-    font-weight: var(--fat-weight);
+    font-weight: var(--medium-weight);
     width: 100%;
     box-sizing: border-box;
     padding: 15px 20px;
@@ -185,6 +186,7 @@
 .conditions__btn {
     color: var(--gray-400);
     font-size: 16px;
+    font-weight: var(--medium-weight);
     background-color: var(--white);
     width: 100%;
     box-sizing: border-box;

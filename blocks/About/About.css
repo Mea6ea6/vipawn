@@ -20,7 +20,7 @@
 .about__card-title {
     color: var(--accent);
     font-size: 24px;
-    font-weight: var(--fat-weight);
+    font-weight: var(--bold-weight);
     line-height: 117%;
     margin: 0 0 16px;
 }

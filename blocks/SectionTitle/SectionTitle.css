@@ -1,7 +1,7 @@
 .section-title {
     font-family: var(--heading-font);
     font-size: 64px;
-    font-weight: 500;
+    font-weight: var(--medium-weight);
     line-height: 125%;
     text-align: center;
 }
