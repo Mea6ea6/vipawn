@@ -87,7 +87,7 @@
     padding: 20px;  
     border-radius: 4px;
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1439px) {
     .faq {
         flex-direction: column;
     }
@@ -105,7 +105,7 @@
         opacity: 1;
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .faq__header {
         flex-direction: column;
     }

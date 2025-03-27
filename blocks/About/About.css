@@ -94,7 +94,7 @@
     border-radius: 6px;
     border: 1px solid var(--gray-200);
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1439px) {
     .about {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -102,7 +102,7 @@
         display: none;
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .about {
         display: flex;
         align-items: center;

@@ -105,7 +105,7 @@
     justify-content: center;
     border-radius: 6px;
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1439px) {
     .navbar__sign-btns {
         display: none;
     }

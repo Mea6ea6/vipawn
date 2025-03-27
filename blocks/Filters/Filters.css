@@ -276,7 +276,7 @@
   display: none;
   border-radius: 6px;  
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .filters {
     max-height: 100vh;
     height: 100%;
@@ -292,9 +292,7 @@
     pointer-events: all;
     opacity: 1;
   }
-}
-@media screen and (max-width: 768px) {
-    .filters__save-btn {
-      display: block;
-    }
+  .filters__save-btn {
+    display: block;
+  }
 }

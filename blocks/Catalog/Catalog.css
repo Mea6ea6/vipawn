@@ -50,7 +50,7 @@
   grid-auto-rows: 430px;
   gap: 20px;
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1439px) {
   .catalog__container {
     grid-template-columns: 290px 1fr;
   }
@@ -59,7 +59,7 @@
     grid-auto-rows: 320px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .catalog__filters-tags {
     display: none;
   }

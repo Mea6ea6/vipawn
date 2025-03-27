@@ -5,12 +5,12 @@
     line-height: 125%;
     text-align: center;
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1439px) {
     .section-title {
         font-size: 48px;
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .section-title {
         font-size: 36px;
     }

@@ -239,7 +239,7 @@
     border: 1px solid var(--gray-200);
     border-radius: 6px;
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1439px) {
     .novelties__text {
         align-items: start;
     }
@@ -280,7 +280,7 @@
         transform: translate(-50%, -50%);
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .novelties__card {
         max-height: 600px;
         display: flex;

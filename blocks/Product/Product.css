@@ -526,7 +526,7 @@
 .product__rec-list::-webkit-scrollbar {
     display: none;
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1439px) {
     .product__container {
         display: flex;
         align-items: center;
@@ -574,7 +574,7 @@
         height: 420px;
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .product__heading .breadcrumbs {
         display: none;
     }

@@ -146,7 +146,7 @@
   padding: 20px;
   border-radius: 6px;
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1439px) {
     .rec-card__promo {
         min-height: 200px;
     }
@@ -165,7 +165,7 @@
       padding: 15px 20px;
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .rec-card__sub-title {
     font-size: 14px;
   }

@@ -80,7 +80,7 @@
 .footer__copyright-span {
     color: var(--gray-100);
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1439px) {
     .footer__container {
         flex-direction: column;
         align-items: start;

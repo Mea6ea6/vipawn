@@ -247,7 +247,7 @@
     border-radius: 6px;
     border: 1px solid var(--gray-100);
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1439px) {
     .contact {
         display: flex;
         align-items: center;
@@ -264,7 +264,7 @@
         max-width: 60%;
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .contact__adresses-caption {
         max-width: 100%;
     }
