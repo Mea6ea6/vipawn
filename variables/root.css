@@ -16,12 +16,12 @@
     --transition-slow: 0.9s ease-in-out;
     --transition-very-slow: 1.5s ease-in-out;
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1439px) {
     :root {
         --max-width: 728px;
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     :root {
         --max-width: 408px;
     }
