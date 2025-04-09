@@ -1,5 +1,5 @@
 .filters {
-  background-color: var(--black);
+  background-color: var(--gray-400);
   width: 100%;
   max-height: fit-content;
   box-sizing: border-box;
@@ -278,6 +278,7 @@
 }
 @media screen and (max-width: 767px) {
   .filters {
+    background-color: var(--black);
     max-height: 100vh;
     height: 100%;
     position: fixed;

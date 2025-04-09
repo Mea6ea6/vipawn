@@ -12,6 +12,7 @@
     transform: translate(-50%, 0) scale(1);
     opacity: 1;
     transition: var(--transition-fast);
+    box-shadow: 0 4px 60px 1px #00000099;
     border-radius: 10px;
 }
 .navbar_disactive {

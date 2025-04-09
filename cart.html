@@ -228,9 +228,94 @@
                         </article>
                     </div>
                 </div>
-                <div class="cart__summary">
-                    <!-- Продолжить -->
-                </div>
+                <form class="cart__summary">
+                    <div class="cart__details">
+                        <div class="cart__cards">
+                            <button class="cart__card cart__card_selected" type="button">
+                                <img class="cart__card-img" src="./images/cart/__card.svg" alt="card-img">
+                                <div class="cart__card-info">
+                                    <p class="cart__card-number">•• 5625</p>
+                                    <img class="cart__card-icon" src="./images/cart/__card-visa.svg" alt="card-icon">
+                                </div>
+                            </button>
+                            <button class="cart__card" type="button">
+                                <img class="cart__card-img" src="./images/cart/__card.svg" alt="card-img">
+                                <div class="cart__card-info">
+                                    <p class="cart__card-number">•• 5440</p>
+                                    <img class="cart__card-icon" src="./images/cart/__card-master.svg" alt="card-icon">
+                                </div>
+                            </button>
+                            <button class="cart__card cart__card_option" type="button">
+                                <img class="cart__card-img cart__card-img_option" src="./images/cart/__add-card.svg" alt="card-img">
+                                Add a new card
+                            </button>
+                            <button class="cart__card cart__card_option" type="button">
+                                <img class="cart__card-img cart__card-img_option" src="./images/cart/__other.svg" alt="card-img">
+                                More methods
+                            </button>
+                        </div>
+                        <div class="cart__detail-rows">
+                            <div class="cart__detail-row">
+                                <p class="cart__detail-label cart__detail-label_accent">1 item</p>
+                                <p class="cart__detail-value cart__detail-value_accent">$92 400</p>
+                            </div>
+                            <div class="cart__detail-row">
+                                <p class="cart__detail-label">Discount</p>
+                                <p class="cart__detail-value">$8 400</p>
+                            </div>
+                            <div class="cart__detail-row">
+                                <p class="cart__detail-label">Delivery and services</p>
+                                <p class="cart__detail-value">Free</p>
+                            </div>
+                            <input class="cart__detail-promocode" placeholder="Promocode" />
+                            <div class="cart__detail-total">
+                                <p class="cart__detail-label cart__detail-label_accent">Payment</p>
+                                <p class="cart__detail-total-value">$84 000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart__conditions">
+                        <div class="cart__conditions-prices">
+                            <p class="cart__conditions-price">$ 16 800</p>
+                            <img class="cart__conditions-price-icon" src="./images/cart/__ellipsis.svg" alt="to">
+                            <p class="cart__conditions-price">$ 67 800</p>
+                            <img class="cart__conditions-price-icon" src="./images/cart/__question.svg" alt="question">
+                            <div class="cart__conditions-toggle">
+                                <input class="cart__conditions-check-box" type="checkbox" id="reg-email" name="reg-email" value="E-mail" checked> 
+                                <label class="cart__conditions-slider" for="reg-email"></label>
+                            </div>
+                        </div>
+                        <div class="cart__conditions-details">
+                            <div class="cart__conditions-details-today">
+                                <div class="cart__conditions-details-today-bar"></div>
+                                <p class="cart__conditions-details-label">Today</p>
+                                <p class="cart__conditions-details-value">$ 16 800</p>
+                            </div>
+                            <div class="cart__conditions-details-deadline">
+                                <div class="cart__conditions-details-deadline-bar"></div>
+                                <p class="cart__conditions-details-label">Deadline: <span class="cart__conditions-details-date">09 / 08 / 25</span></p>
+                                <p class="cart__conditions-details-remain">Remains to pay <span class="cart__conditions-details-value">$ 67 800</span></p>
+                            </div>
+                        </div>
+                        <div class="cart__conditions-select">
+                            <input class="cart__conditions-select-input" type="text" data-value="6 months" placeholder="6 months" readonly>
+                            <div class="cart__conditions-select-icon"></div>
+                            <div class="cart__conditions-select-wrapper">
+                                <div class="cart__conditions-select-option" data-value="3 months">3 months</div>
+                                <div class="cart__conditions-select-option" data-value="6 months">6 months</div>
+                                <div class="cart__conditions-select-option" data-value="12 months">12 months</div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="cart__btn" type="submit">
+                        Purchase Layaway
+                        <span class="cart__btn-span">•• 5625</span>
+                    </button>
+                    <div class="cart__secure">
+                        <img class="cart__secure-img" src="./images/cart/__secure.svg" alt="secure">
+                        <p class="cart__secure-text">Secure checkout</p>
+                    </div>
+                </form>
             </section>
         </main>
 
