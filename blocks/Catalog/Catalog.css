@@ -84,4 +84,8 @@
     display: flex;
     flex-direction: column;
   }
+  .catalog__products {
+    grid-auto-rows: 310px;
+    gap: 10px;
+  }
 }

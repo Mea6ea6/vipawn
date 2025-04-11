@@ -179,3 +179,11 @@
       gap: unset;
     }
 }
+@media screen and (max-width: 767px) {
+  .product-card__info {
+    padding: 12px 12px;
+  }
+  .product-card__discount {
+    display: none;
+  }
+}

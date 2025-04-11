@@ -11,6 +11,7 @@
     left: 0;
     transform: scale(1.1);
     opacity: 0;
+    overflow: auto;
     transition: var(--transition-fast);
     cursor: pointer;
 }
@@ -30,6 +31,7 @@
     padding: 30px;
     border-radius: 10px;
     cursor: auto;
+    overflow: auto;
 }
 .sign__form.sign_active {
     display: flex;
@@ -200,4 +202,18 @@
 }
 .sign__alt-btn:hover {
     border: 1px solid var(--white);
+}
+@media screen and (max-width: 767px) {
+    .sign__form {
+        max-width: 100%;
+        min-height: 100vh;
+        border-radius: 0;
+    }
+    .sign__create-pass {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .sign__alt-btns {
+        flex-wrap: wrap;
+    }
 }
