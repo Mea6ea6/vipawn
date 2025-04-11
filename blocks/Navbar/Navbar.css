@@ -15,7 +15,7 @@
     box-shadow: 0 4px 60px 1px #00000099;
     border-radius: 10px;
 }
-.navbar_disactive {
+.navbar_hidden {
     z-index: -1;
     transform: translate(-50%, 25%) scale(0.9);
     opacity: 0;

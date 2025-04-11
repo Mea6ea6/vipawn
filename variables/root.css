@@ -23,6 +23,6 @@
 }
 @media screen and (max-width: 767px) {
     :root {
-        --max-width: 380px;
+        --max-width: 360px;
     }
 }

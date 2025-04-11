@@ -167,7 +167,7 @@
     grid-auto-columns: 120px;
     grid-template-rows: 80px;
     gap: 10px;
-    overflow: auto;
+    overflow: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
 }

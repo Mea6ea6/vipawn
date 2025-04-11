@@ -245,7 +245,7 @@
                                     <span class="product__price-discount">-10%</span>
                                 </div>
                                 <div class="product__installment">
-                                    <button class="product__installment-btn">
+                                    <button class="product__installment-btn" type="button">
                                         <img class="product__installment-btn-icon" src="./images/product/__installment-settings.svg" alt="settings">
                                     </button>
                                     <div class="product__installment-info">
@@ -275,19 +275,35 @@
                                 </div>
                                 <div class="product__delivery">
                                     <p class="product__delivery-title">Delivery Information</p>
-                                    <div class="product__delivery-addresses">
-                                        <div class="product__delivery-address">
-                                            <img class="product__delivery-icon" src="./images/product/__point.svg" alt="point">
-                                            <div class="product__delivery-text">
-                                                <p class="product__delivery-subtitle">22 Komitas Ave.</p>
-                                                <a class="product__delivery-link" href="#">Another place</a>
-                                            </div>
-                                        </div>
-                                        <div class="product__delivery-address">
+                                    <div class="product__delivery-info">
+                                        <div class="product__delivery-item">
                                             <img class="product__delivery-icon" src="./images/product/__delivery.svg" alt="delivery">
                                             <div class="product__delivery-text">
                                                 <p class="product__delivery-subtitle">By Vipawn courier <span class="product__delivery-subtitle-span">Free</span></p>
-                                                <p class="product__delivery-caption">Will arrive on April 7</p>
+                                                <button class="product__delivery-btn" type="button">
+                                                    Will arrive on April 7
+                                                    <img class="product__delivery-edit" src="./images/product/__edit.svg" alt="edit">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="product__delivery-item">
+                                            <img class="product__delivery-icon" src="./images/product/__point.svg" alt="point">
+                                            <div class="product__delivery-text">
+                                                <p class="product__delivery-subtitle">22 Komitas Ave.</p>
+                                                <button class="product__delivery-btn" type="button">
+                                                    Another place
+                                                    <img class="product__delivery-edit" src="./images/product/__edit.svg" alt="edit">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="product__delivery-item">
+                                            <img class="product__delivery-icon" src="./images/product/__point.svg" alt="point">
+                                            <div class="product__delivery-text">
+                                                <p class="product__delivery-subtitle">Recipient</p>
+                                                <button class="product__delivery-btn" type="button">
+                                                    Khrimyan Arev, +374 93 501380
+                                                    <img class="product__delivery-edit" src="./images/product/__edit.svg" alt="edit">
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
@@ -305,29 +321,35 @@
                                     <ul class="product__details-list">
                                         <li class="product__details-item">
                                             Article Number 
-                                            <span class="product__details-value">HR13-574855</span>
-                                            <button class="product__details-copy"></button>
+                                            <div class="product__details-copy">
+                                                <span class="product__details-tooltip">Copied</span>
+                                                <p class="product__details-value">HR13-574855</p>
+                                                <button class="product__details-copy-btn" type="button"></button>
+                                            </div>
                                         </li>
                                         <li class="product__details-item">
                                             Serial Number 
-                                            <span class="product__details-value">124060</span> 
-                                            <button class="product__details-copy"></button>
+                                            <div class="product__details-copy">
+                                                <span class="product__details-tooltip">Copied</span>
+                                                <p class="product__details-value">124060</p> 
+                                                <button class="product__details-copy-btn" type="button"></button>
+                                            </div>
                                         </li>
                                         <li class="product__details-item">
                                             Type 
-                                            <span class="product__details-value">Wrist Watch</span>
+                                            <p class="product__details-value">Wrist Watch</p>
                                         </li>
                                         <li class="product__details-item">
                                             Body Material 
-                                            <span class="product__details-value">Oystersteel</span>
+                                            <p class="product__details-value">Oystersteel</p>
                                         </li>
                                         <li class="product__details-item">
                                             Bracelet/Strap 
-                                            <span class="product__details-value">Stainless Oyster</span>
+                                            <p class="product__details-value">Stainless Oyster</p>
                                         </li>
                                         <li class="product__details-item">
                                             Glass 
-                                            <span class="product__details-value">Sapphire crystal with anti-reflective coating</span>
+                                            <p class="product__details-value">Sapphire crystal with anti-reflective coating</p>
                                         </li>
                                     </ul>
                                 </div>

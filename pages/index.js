@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         signContainer.classList.toggle("sign_active", !!form);
         logInForm.classList.remove("sign_active");
         signUpForm.classList.remove("sign_active");
-        navbar.classList.toggle("navbar_disactive", !!form);
+        navbar.classList.toggle("navbar_hidden", !!form);
         form?.classList.add("sign_active");
     };
 

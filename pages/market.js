@@ -6,12 +6,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const burgerBtns = [...document.querySelectorAll(".header__burger-page-btn_list")];
     const burgerItems = [...document.querySelectorAll(".header__burger-item_list")];
     const burgerLinks = [...document.querySelectorAll(".header__burger-list-link")];
+    const navbar = document.querySelector(".navbar");
     const filterTags = [...document.querySelectorAll(".catalog__filters-tag")];
     const filtersContainer = document.querySelector(".filters");
     const filterLabels = [...document.querySelectorAll(".filters__item-label")];
     const likeButtons = [...document.querySelectorAll(".product-card__like")];
     const filtersSaveBtn = document.querySelector(".filters__save-btn");
-    const navbar = document.querySelector(".navbar"); // <-- добавлено
 
     // [ Functions ]
     const closeBurgerMenu = () => {
@@ -31,12 +31,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const toggleFilters = () => {
         filtersContainer?.classList.toggle("filters_active");
-        navbar?.classList.toggle("navbar_disactive");
+        navbar?.classList.toggle("navbar_hidden");
     };
 
     const closeFilters = () => {
         filtersContainer?.classList.remove("filters_active");
-        navbar?.classList.remove("navbar_disactive");
+        navbar?.classList.remove("navbar_hidden");
     };
 
     const toggleLike = (event) => {

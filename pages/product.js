@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const burgerBtns = [...document.querySelectorAll(".header__burger-page-btn_list")];
     const burgerItems = [...document.querySelectorAll(".header__burger-item_list")];
     const burgerLinks = [...document.querySelectorAll(".header__burger-list-link")];
+    const navbar = document.querySelector(".navbar");
     const likeButton = document.querySelector(".product__heading-btn_like");
     const likeButtons = [...document.querySelectorAll(".rec-card__like")];
     const selectButton = document.querySelector(".conditions__select");
@@ -46,7 +47,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const togglePopup = (popup, state) => {
         popup.classList.toggle("conditions_active", state);
+        if (state) {
+            navbar?.classList.add("navbar_hidden");
+        } else {
+            navbar?.classList.remove("navbar_hidden");
+        }
     };
+    
 
     const handleDetailCopy = (event) => {
         const button = event.currentTarget;
