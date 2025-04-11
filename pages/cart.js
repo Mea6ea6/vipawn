@@ -9,6 +9,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const selectAllCheckbox = document.querySelector(".cart__check-box-input");
     const itemCheckboxes = [...document.querySelectorAll(".cart-item__check-box-input")];
     const copyButtons = [...document.querySelectorAll(".cart-item__code-copy")];
+    const cartSelect = document.querySelector(".cart__conditions-select");
+    const cartSelectInput = document.querySelector(".cart__conditions-select-input");
+    const cartSelectWrapper = document.querySelector(".cart__conditions-select-wrapper");
+    const cartSelectOptions = [...document.querySelectorAll(".cart__conditions-select-option")];
 
     // [ Functions ]
     const closeBurgerMenu = () => {
@@ -32,6 +36,14 @@ document.addEventListener("DOMContentLoaded", () => {
         const allChecked = itemCheckboxes.every((checkbox) => checkbox.checked);
         selectAllCheckbox.checked = allChecked;
     };
+
+    const toggleCartDropdown = () => {
+        cartSelectWrapper.classList.toggle("cart__conditions-select-wrapper_active");
+    };
+    
+    const closeCartDropdown = () => {
+        cartSelectWrapper.classList.remove("cart__conditions-select-wrapper_active");
+    };    
 
     const handleCopy = (event) => {
         const button = event.currentTarget;
@@ -100,5 +112,28 @@ document.addEventListener("DOMContentLoaded", () => {
         checkbox.addEventListener("change", () => {
             syncSelectAllCheckbox();
         });
+    });
+
+    // Cart Select Dropdown
+    cartSelect?.addEventListener("click", (event) => {
+        event.stopPropagation();
+        toggleCartDropdown();
+    });
+
+    cartSelectOptions.forEach((option) => {
+        option.addEventListener("click", (event) => {
+            event.stopPropagation();
+            const value = option.getAttribute("data-value");
+            cartSelectInput.value = value;
+            cartSelectInput.placeholder = value;
+            cartSelectInput.setAttribute("data-value", value);
+            closeCartDropdown();
+        });
+    });
+
+    document.addEventListener("click", (event) => {
+        if (!event.target.closest(".cart__conditions-select")) {
+            closeCartDropdown();
+        }
     });
 });

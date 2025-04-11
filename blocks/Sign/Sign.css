@@ -205,9 +205,7 @@
 }
 @media screen and (max-width: 767px) {
     .sign__form {
-        max-width: 100%;
-        min-height: 100vh;
-        border-radius: 0;
+        max-width: 320px;
     }
     .sign__create-pass {
         flex-direction: column;
