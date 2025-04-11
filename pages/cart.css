@@ -5,6 +5,9 @@
 @import url("../blocks/Background/Background.css");
 @import url("../blocks/Page/Page.css");
 @import url("../blocks/Navbar/Navbar.css");
+@import url("../blocks/AddCard/AddCard.css");
+@import url("../blocks/Payment/Payment.css");
+@import url("../blocks/Recipient/Recipient.css");
 @import url("../blocks/Header/Header.css");
 @import url("../blocks/Content/Content.css");
 @import url("../blocks/Cart/Cart.css");

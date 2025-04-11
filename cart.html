@@ -9,13 +9,178 @@
 </head>
 <body class="background">
     <div class="page">
+        <div class="add-card">
+            <form class="add-card__container">
+              <div class="add-card__header">
+                <h3 class="add-card__title">
+                  <span class="add-card__title-highlight">ADD</span> A CARD FROM ANY BANK
+                </h3>
+                <button class="add-card__close-button" type="button"></button>
+              </div>
+              <div class="add-card__form">
+                <label class="add-card__field">
+                  <span class="add-card__label">Card number</span>
+                  <input class="add-card__input" type="number" placeholder="0000 0000 0000 0000" maxlength="16"/>
+                </label>
+                <div class="add-card__row">
+                  <label class="add-card__field">
+                    <span class="add-card__label">Valid until</span>
+                    <input class="add-card__input add-card__input_date" type="text" placeholder="MM/YY" maxlength="7"/>
+                  </label>
+                  <label class="add-card__field">
+                    <span class="add-card__label">CVV</span>
+                    <input class="add-card__input" type="text" placeholder="000" maxlength="3"/>
+                  </label>
+                </div>
+                <button class="add-card__submit" type="submit">Add a card</button>
+                <p class="add-card__note">We will charge and refund a small amount for verification.</p>
+              </div>
+            </form>
+        </div>
+
+        <div class="payment">
+            <form class="payment__container">
+                <div class="payment__header">
+                    <h3 class="payment__title">PAYMENT METHODS</h3>
+                    <button class="payment__close-button" type="button"></button>
+                </div>
+                <div class="payment__list">
+                    <div class="payment__list-wrapper">
+                        <label class="payment__item" for="payment-1">
+                            <div class="payment__info">
+                                <div class="payment__heading">
+                                    <img class="payment__icon" src="./images/payment/__wire.svg" alt="method-icon">
+                                    <p class="payment__name">Bank Wire</p>
+                                </div>
+                                <p class="payment__details">Lorem Ipsum, 1234 •• 1488228</p>
+                            </div>
+                            <input class="payment__radio" type="radio" name="payment" id="payment-1"/>
+                        </label>
+                        <label class="payment__item" for="payment-2">
+                            <div class="payment__info">
+                                <div class="payment__heading">
+                                    <img class="payment__icon" src="./images/payment/__wallet.svg" alt="method-icon">
+                                    <p class="payment__name">Metamask — USDT (TRC20)</p>
+                                </div>
+                                <p class="payment__details">0x12341488228</p>
+                            </div>
+                            <input class="payment__radio" type="radio" name="payment" id="payment-2"/>
+                        </label>
+                        <label class="payment__item" for="payment-3">
+                            <div class="payment__info">
+                                <div class="payment__heading">
+                                    <img class="payment__icon" src="./images/payment/__wallet.svg" alt="method-icon">
+                                    <p class="payment__name">Coinbase — BTC (ERC20)</p>
+                                </div>
+                                <p class="payment__details">0x12342281488</p>
+                            </div>
+                            <input class="payment__radio" type="radio" name="payment" id="payment-3"/>
+                        </label>
+                        <label class="payment__item" for="payment-4">
+                            <div class="payment__info">
+                                <div class="payment__heading">
+                                    <img class="payment__icon" src="./images/payment/__wallet.svg" alt="method-icon">
+                                    <p class="payment__name">Coinbase — BTC (ERC20)</p>
+                                </div>
+                                <p class="payment__details">0x12342281488</p>
+                            </div>
+                            <input class="payment__radio" type="radio" name="payment" id="payment-4"/>
+                        </label>
+                    </div>
+                </div>
+                <div class="payment__actions">
+                    <button class="payment__submit" type="button">Select</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="recipient">
+            <div class="recipient__select">
+                <div class="recipient__header">
+                    <h3 class="recipient__title">RECIPIENT</h3>
+                    <button class="recipient__close" type="button"></button>
+                </div>
+                <div class="recipient__list">
+                    <div class="recipient__list-wrapper">
+                        <label class="recipient__item">
+                            <input class="recipient__radio" type="radio" name="recipient" />
+                            <div class="recipient__info">
+                                <p class="recipient__name">Lorem Ipsum</p>
+                                <p class="recipient__details">loremipsum@gmail.com, +000 00 000000</p>
+                            </div>
+                            <button class="recipient__more-button" type="button"></button>
+                        </label>
+                        <label class="recipient__item">
+                            <input class="recipient__radio" type="radio" name="recipient" />
+                            <div class="recipient__info">
+                                <p class="recipient__name">Lorem Ipsum</p>
+                                <p class="recipient__details">loremipsum@gmail.com, +000 00 000000</p>
+                            </div>
+                            <button class="recipient__more-button" type="button"></button>
+                        </label>
+                        <label class="recipient__item">
+                            <input class="recipient__radio" type="radio" name="recipient" />
+                            <div class="recipient__info">
+                                <p class="recipient__name">Lorem Ipsum</p>
+                                <p class="recipient__details">loremipsum@gmail.com, +000 00 000000</p>
+                            </div>
+                            <button class="recipient__more-button" type="button"></button>
+                        </label>
+                        <label class="recipient__item">
+                            <input class="recipient__radio" type="radio" name="recipient" />
+                            <div class="recipient__info">
+                                <p class="recipient__name">Lorem Ipsum</p>
+                                <p class="recipient__details">loremipsum@gmail.com, +000 00 000000</p>
+                            </div>
+                            <button class="recipient__more-button" type="button"></button>
+                        </label>
+                    </div>
+                </div>
+                <div class="recipient__actions">
+                    <button class="recipient__select-btn" type="button">Select</button>
+                    <button class="recipient__add-btn" type="button"></button>
+                </div>
+            </div>
+            <div class="recipient__new">
+                <div class="recipient__header">
+                    <h3 class="recipient__title">
+                        <span class="recipient__title-span">NEW</span>
+                        RECIPIENT
+                    </h3>
+                    <button class="recipient__close" type="button"></button>
+                </div>
+                <div class="recipient__alert">
+                    <div class="recipient__alert-heading">
+                        <img class="recipient__alert-icon" src="./images/recipient/__alert.svg" alt="alert">
+                        <p class="recipient__alert-title">Provide real data</p>
+                    </div>
+                    <p class="recipient__alert-text">You may be asked for your passport before handing over a paid order.</p>
+                </div>
+                <form class="recipient__form">
+                    <label class="recipient__field">
+                        <input type="text" placeholder="Name and Surname" required />
+                        <span class="recipient__error">Write in full</span>
+                    </label>
+                    <label class="recipient__field">
+                        <input type="tel" placeholder="+1 (XXX) XXX-XXXX" required />
+                        <span class="recipient__error">Write a 11-digit US number</span>
+                    </label>
+                    <label class="recipient__field">
+                        <input type="email" placeholder="Email" required />
+                        <span class="recipient__error">Write an email</span>
+                    </label>
+                    <button class="recipient__save-btn" type="submit">Save</button>
+                </form>
+            </div>
+        </div>
+
         <nav class="navbar">
             <a class="navbar__logo-link" href="./index.html">
                 <img class="navbar__logo-icon" src="./images/navbar/__logo.svg" alt="vipawn">
             </a>
             <div class="navbar__user-btns">
                 <a class="navbar__profile-btn" href="#">
-                    <img class="navbar__profile-img" src="./images/navbar/__user.png" alt="user">Hey, User
+                    <img class="navbar__profile-img" src="./images/navbar/__user.png" alt="user">Hey, Lorem Ipsum
                 </a>
                 <button class="navbar__logout-btn" type="button">
                     <img class="navbar__logout-icon" src="./images/navbar/__logout.svg" alt="logout">
@@ -115,7 +280,7 @@
                                     <img class="cart__delivery-icon" src="./images/cart/__delivery.svg" alt="delivery">
                                     <p class="cart__delivery-subtitle">By Vipawn courier</p>
                                 </div>
-                                <button class="cart__delivery-btn" type="button">
+                                <button class="cart__delivery-btn cart__delivery-btn_calendar" type="button">
                                     Will arrive on April 7
                                     <img class="cart__delivery-edit" src="./images/cart/__edit.svg" alt="edit">
                                 </button>
@@ -125,7 +290,7 @@
                                     <img class="cart__delivery-icon" src="./images/cart/__delivery.svg" alt="delivery">
                                     <p class="cart__delivery-subtitle">Address</p>
                                 </div>
-                                <button class="cart__delivery-btn" type="button">
+                                <button class="cart__delivery-btn cart__delivery-btn_address" type="button">
                                     22 Komitas Ave.
                                     <img class="cart__delivery-edit" src="./images/cart/__edit.svg" alt="edit">
                                 </button>
@@ -135,8 +300,8 @@
                                     <img class="cart__delivery-icon" src="./images/cart/__delivery.svg" alt="delivery">
                                     <p class="cart__delivery-subtitle">Recipient</p>
                                 </div>
-                                <button class="cart__delivery-btn" type="button">
-                                    Khrimyan Arev, +374 93 501380
+                                <button class="cart__delivery-btn cart__delivery-btn_recipient" type="button">
+                                    Lorem Ipsum, +374 93 501380
                                     <img class="cart__delivery-edit" src="./images/cart/__edit.svg" alt="edit">
                                 </button>
                             </div>
@@ -245,11 +410,11 @@
                                     <img class="cart__card-icon" src="./images/cart/__card-master.svg" alt="card-icon">
                                 </div>
                             </button>
-                            <button class="cart__card cart__card_option" type="button">
+                            <button class="cart__card cart__card_option cart__card_add" type="button">
                                 <img class="cart__card-img cart__card-img_option" src="./images/cart/__add-card.svg" alt="card-img">
                                 Add a new card
                             </button>
-                            <button class="cart__card cart__card_option" type="button">
+                            <button class="cart__card cart__card_option cart__card_other" type="button">
                                 <img class="cart__card-img cart__card-img_option" src="./images/cart/__other.svg" alt="card-img">
                                 More methods
                             </button>

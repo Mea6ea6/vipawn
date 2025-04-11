@@ -21,14 +21,14 @@
     transform: scale(1);
 }
 .sign__form {
-    background: var(--gray-400);
+    background-color: var(--gray-400);
     max-width: 460px;
     width: 100%;
     display: none;
     align-items: center;
     flex-direction: column;
     box-sizing: border-box;
-    padding: 30px;
+    padding: 20px;
     border-radius: 10px;
     cursor: auto;
     overflow: auto;

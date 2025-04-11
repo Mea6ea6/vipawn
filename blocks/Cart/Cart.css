@@ -416,14 +416,28 @@
     background-color: var(--gray-300);
 }
 .cart__btn {
+    color: var(--gray-400);
+    font-size: 16px;
+    font-weight: var(--medium-weight);
     width: 100%;
+    box-sizing: border-box;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 6px;
 }
 .cart__btn-span {
+    color: var(--gray-100);
 }
 .cart__secure {
     width: 100%;
-}
-.cart__secure-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 .cart__secure-text {
+    color: var(--gray-100);
+    font-size: 12px;
 }
