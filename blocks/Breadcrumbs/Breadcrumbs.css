@@ -1,21 +1,16 @@
 .breadcrumbs {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin: 0 0 20px;
-}
-.breadcrumbs__span {
-  color: var(--gray-100);
-  font-size: 16px;
-  line-height: 125%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 20px;
 }
 .breadcrumbs__link {
-  color: var(--gray-100);
-  font-size: 16px;
-  line-height: 125%;
+    color: var(--gray-100);
+    font-size: 16px;
+    line-height: 125%;
 }
-.breadcrumbs__text {
-  color: var(--white);
-  font-size: 16px;
-  line-height: 125%;
+.breadcrumbs__span {
+    color: var(--gray-100);
+    font-size: 16px;
+    line-height: 125%;
 }
