@@ -39,121 +39,123 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // [ Functions ]
     const closeBurgerMenu = () => {
-        burgerItems.forEach((item) => item.classList.remove("header__burger-item_active"));
+        burgerItems.forEach(item => item.classList.remove("header__burger-item_active"));
         burgerMenu?.classList.remove("header__burger_active");
         burgerButton?.classList.remove("header__burger_active");
     };
 
-    const toggleLike = (event) => {
-        event.preventDefault();
-        event.currentTarget.classList.toggle("cart-item__like-btn_active");
+    const toggleLike = (e) => {
+        e.preventDefault();
+        e.currentTarget.classList.toggle("cart-item__like-btn_active");
     };
 
     const toggleAllCheckboxes = (checked) => {
-        itemCheckboxes.forEach((checkbox) => {
-            checkbox.checked = checked;
-        });
+        itemCheckboxes.forEach(cb => cb.checked = checked);
     };
 
     const syncSelectAllCheckbox = () => {
-        const allChecked = itemCheckboxes.every((checkbox) => checkbox.checked);
+        const allChecked = itemCheckboxes.every(cb => cb.checked);
         selectAllCheckbox.checked = allChecked;
     };
 
     const toggleCartDropdown = () => {
         cartSelectWrapper.classList.toggle("cart__conditions-select-wrapper_active");
     };
-    
+
     const closeCartDropdown = () => {
         cartSelectWrapper.classList.remove("cart__conditions-select-wrapper_active");
-    };    
+    };
 
-    const handleCopy = (event) => {
-        const button = event.currentTarget;
+    const handleCopy = (e) => {
+        const button = e.currentTarget;
         const codeContainer = button.closest(".cart-item__code");
         const codeValue = codeContainer?.querySelector(".cart-item__code-value")?.textContent;
         const tooltip = codeContainer?.querySelector(".cart-item__code-tooltip");
+
         if (codeValue && tooltip) {
             navigator.clipboard.writeText(codeValue.trim())
                 .then(() => {
                     tooltip.classList.add("cart-item__code-tooltip_visible");
-    
                     setTimeout(() => {
                         tooltip.classList.remove("cart-item__code-tooltip_visible");
                     }, 1500);
                 })
-                .catch((err) => {
-                    console.error("Copy failed:", err);
-                });
+                .catch(err => console.error("Copy failed:", err));
         }
     };
 
-    // [ Event-handlers ]
-    // Burger
-    burgerButton?.addEventListener("click", (event) => {
-        event.stopPropagation();
+    const togglePopup = (popup, open = true) => {
+        popup?.classList.toggle(`${popup.classList[0]}_active`, open);
+        navbar?.classList.toggle("navbar_hidden", open);
+    };
+
+    const switchRecipientMode = (isNew) => {
+        recipientSelectBlock?.classList.toggle("recipient__select_active", !isNew);
+        recipientNewBlock?.classList.toggle("recipient__new_active", isNew);
+    };
+
+    const switchAddressMode = (isNew) => {
+        addressSelectBlock?.classList.toggle("address__select_active", !isNew);
+        addressNewBlock?.classList.toggle("address__new_active", isNew);
+    };
+
+    // [ Event Listeners ]
+    // Burger Menu
+    burgerButton?.addEventListener("click", (e) => {
+        e.stopPropagation();
         burgerButton.classList.toggle("header__burger_active");
         burgerMenu?.classList.toggle("header__burger_active");
     });
 
-    burgerBtns.forEach((btn) => {
-        btn.addEventListener("click", (event) => {
-            event.stopPropagation();
+    burgerBtns.forEach(btn => {
+        btn.addEventListener("click", (e) => {
+            e.stopPropagation();
             btn.closest(".header__burger-item_list")?.classList.toggle("header__burger-item_active");
         });
     });
 
-    burgerLinks.forEach((link) => link.addEventListener("click", closeBurgerMenu));
+    burgerLinks.forEach(link => link.addEventListener("click", closeBurgerMenu));
 
-    document.addEventListener("click", (event) => {
+    document.addEventListener("click", (e) => {
         if (
-            !event.target.closest(".header__burger-item_list") &&
-            !event.target.closest(".header__burger-menu") &&
-            !event.target.closest(".header__burger")
-        ) {
-            closeBurgerMenu();
-        }
+            !e.target.closest(".header__burger-item_list") &&
+            !e.target.closest(".header__burger-menu") &&
+            !e.target.closest(".header__burger")
+        ) closeBurgerMenu();
+
+        if (!e.target.closest(".cart__conditions-select")) closeCartDropdown();
     });
 
-    // Like
-    likeButtons.forEach((btn) => {
-        btn.addEventListener("click", toggleLike);
+    // Like buttons
+    likeButtons.forEach(btn => btn.addEventListener("click", toggleLike));
+
+    // Copy code buttons
+    copyButtons.forEach(btn => btn.addEventListener("click", handleCopy));
+
+    // Select All
+    selectAllCheckbox?.addEventListener("change", (e) => {
+        toggleAllCheckboxes(e.target.checked);
     });
 
-    // Copy
-    copyButtons.forEach((btn) => {
-        btn.addEventListener("click", handleCopy);
-    });
+    itemCheckboxes.forEach(cb => cb.addEventListener("change", syncSelectAllCheckbox));
 
-    // Select All Checkbox
-    selectAllCheckbox?.addEventListener("change", (event) => {
-        toggleAllCheckboxes(event.target.checked);
-    });
-
-    // Individual Checkbox changes
-    itemCheckboxes.forEach((checkbox) => {
-        checkbox.addEventListener("change", () => {
-            syncSelectAllCheckbox();
-        });
-    });
-
-    // Cart card selection
-    cartCards.forEach((card) => {
+    // Cart cards
+    cartCards.forEach(card => {
         card.addEventListener("click", () => {
-            cartCards.forEach((c) => c.classList.remove("cart__card_selected"));
+            cartCards.forEach(c => c.classList.remove("cart__card_selected"));
             card.classList.add("cart__card_selected");
         });
     });
 
-    // Cart Select Dropdown
-    cartSelect?.addEventListener("click", (event) => {
-        event.stopPropagation();
+    // Cart select
+    cartSelect?.addEventListener("click", (e) => {
+        e.stopPropagation();
         toggleCartDropdown();
     });
 
-    cartSelectOptions.forEach((option) => {
-        option.addEventListener("click", (event) => {
-            event.stopPropagation();
+    cartSelectOptions.forEach(option => {
+        option.addEventListener("click", (e) => {
+            e.stopPropagation();
             const value = option.getAttribute("data-value");
             cartSelectInput.value = value;
             cartSelectInput.placeholder = value;
@@ -162,29 +164,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    document.addEventListener("click", (event) => {
-        if (!event.target.closest(".cart__conditions-select")) {
-            closeCartDropdown();
-        }
+    // Add card
+    addCardBtn?.addEventListener("click", () => togglePopup(addCardPopup, true));
+    addCardClose?.addEventListener("click", () => togglePopup(addCardPopup, false));
+    addCardPopup?.addEventListener("click", (e) => {
+        if (e.target === addCardPopup) togglePopup(addCardPopup, false);
     });
-
-    // Add Card
-    addCardBtn?.addEventListener("click", () => {
-        addCardPopup?.classList.add("add-card_active");
-        navbar?.classList.add("navbar_hidden");
-    });
-
-    addCardClose?.addEventListener("click", () => {
-        addCardPopup?.classList.remove("add-card_active");
-        navbar?.classList.remove("navbar_hidden");
-    });
-
-    addCardPopup?.addEventListener("click", (event) => {
-        if (event.target === addCardPopup) {
-            addCardPopup.classList.remove("add-card_active");
-            navbar?.classList.remove("navbar_hidden");
-        }
-    });    
 
     dateInput?.addEventListener("input", (e) => {
         let value = e.target.value.replace(/[^\d]/g, "");
@@ -198,96 +183,61 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.target.value.replace(/[^\d]/g, "").length >= 4) e.preventDefault();
     });
 
-    // Payment Methods
-    otherCardBtn?.addEventListener("click", () => {
-        paymentMethodsPopup?.classList.add("payment_active");
-        navbar?.classList.add("navbar_hidden");
-    });
-
-    paymentMethodsPopup?.addEventListener("click", (event) => {
-        if (event.target === paymentMethodsPopup) {
-            paymentMethodsPopup.classList.remove("payment_active");
-            navbar?.classList.remove("navbar_hidden");
-        }
-    });
-
-    paymentMethodsClose?.addEventListener("click", () => {
-        paymentMethodsPopup.classList.remove("payment_active");
-        navbar?.classList.remove("navbar_hidden");
-    });
-
-    paymentMethodsSubmit?.addEventListener("click", () => {
-        paymentMethodsPopup.classList.remove("payment_active");
-        navbar?.classList.remove("navbar_hidden");
+    // Payment methods
+    otherCardBtn?.addEventListener("click", () => togglePopup(paymentMethodsPopup, true));
+    paymentMethodsClose?.addEventListener("click", () => togglePopup(paymentMethodsPopup, false));
+    paymentMethodsSubmit?.addEventListener("click", () => togglePopup(paymentMethodsPopup, false));
+    paymentMethodsPopup?.addEventListener("click", (e) => {
+        if (e.target === paymentMethodsPopup) togglePopup(paymentMethodsPopup, false);
     });
 
     // Recipient
     recipientOpenBtn?.addEventListener("click", () => {
-        recipientPopup?.classList.add("recipient_active");
-        recipientSelectBlock?.classList.add("recipient__select_active");
-        recipientNewBlock?.classList.remove("recipient__new_active");
-        navbar?.classList.add("navbar_hidden");
+        togglePopup(recipientPopup, true);
+        switchRecipientMode(false);
     });
-    
-    recipientAddBtn?.addEventListener("click", () => {
-        recipientSelectBlock?.classList.remove("recipient__select_active");
-        recipientNewBlock?.classList.add("recipient__new_active");
-    });
-    
-    recipientCloseBtns?.forEach((btn) => {
+
+    recipientAddBtn?.addEventListener("click", () => switchRecipientMode(true));
+
+    recipientCloseBtns?.forEach(btn => {
         btn.addEventListener("click", () => {
-            recipientPopup?.classList.remove("recipient_active");
-            recipientSelectBlock?.classList.remove("recipient__select_active");
-            recipientNewBlock?.classList.remove("recipient__new_active");
-            navbar?.classList.remove("navbar_hidden");
+            togglePopup(recipientPopup, false);
+            switchRecipientMode(false);
         });
     });
-    
-    recipientPopup?.addEventListener("click", (event) => {
-        if (event.target === recipientPopup) {
-            recipientPopup.classList.remove("recipient_active");
-            recipientSelectBlock?.classList.remove("recipient__select_active");
-            recipientNewBlock?.classList.remove("recipient__new_active");
-            navbar?.classList.remove("navbar_hidden");
+
+    recipientPopup?.addEventListener("click", (e) => {
+        if (e.target === recipientPopup) {
+            togglePopup(recipientPopup, false);
+            switchRecipientMode(false);
         }
     });
-    
+
     recipientSaveBtn?.addEventListener("click", (e) => {
         e.preventDefault();
-        recipientPopup?.classList.remove("recipient_active");
-        recipientSelectBlock?.classList.remove("recipient__select_active");
-        recipientNewBlock?.classList.remove("recipient__new_active");
-        navbar?.classList.remove("navbar_hidden");
+        togglePopup(recipientPopup, false);
+        switchRecipientMode(false);
     });
 
     // Address
     addressOpenBtn?.addEventListener("click", () => {
-        addressPopup.classList.add("address_active");
-        addressSelectBlock?.classList.add("address__select_active");
-        addressNewBlock?.classList.remove("address__new_active");
-        navbar?.classList.add("navbar_hidden");
+        togglePopup(addressPopup, true);
+        switchAddressMode(false);
     });
 
-    addressAddBtn?.addEventListener("click", () => {
-        addressSelectBlock?.classList.remove("address__select_active");
-        addressNewBlock?.classList.add("address__new_active");
-    });
+    addressAddBtn?.addEventListener("click", () => switchAddressMode(true));
 
-    addressCloseBtns?.forEach((btn) => {
+    addressCloseBtns?.forEach(btn => {
         btn.addEventListener("click", () => {
-            addressPopup?.classList.remove("address_active");
-            addressSelectBlock?.classList.remove("address__select_active");
-            addressNewBlock?.classList.remove("address__new_active");
-            navbar?.classList.remove("navbar_hidden");
+            togglePopup(addressPopup, false);
+            switchAddressMode(false);
         });
     });
 
-    addressPopup?.addEventListener("click", (event) => {
-        if (event.target === addressPopup) {
-            addressPopup.classList.remove("address_active");
-            addressSelectBlock?.classList.remove("address__select_active");
-            addressNewBlock?.classList.remove("address__new_active");
-            navbar?.classList.remove("navbar_hidden");
+    addressPopup?.addEventListener("click", (e) => {
+        if (e.target === addressPopup) {
+            togglePopup(addressPopup, false);
+            switchAddressMode(false);
         }
     });
 });
