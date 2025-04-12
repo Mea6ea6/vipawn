@@ -158,21 +158,110 @@
                 </div>
                 <form class="recipient__form">
                     <label class="recipient__field">
-                        <input type="text" placeholder="Name and Surname" required />
-                        <span class="recipient__error">Write in full</span>
+                        <span class="recipient__field-title">Name and Surname</span>
+                        <input class="recipient__input recipient__input_error" type="text" placeholder="Lorem Ipsum" required />
                     </label>
                     <label class="recipient__field">
-                        <input type="tel" placeholder="+1 (XXX) XXX-XXXX" required />
-                        <span class="recipient__error">Write a 11-digit US number</span>
+                        <span class="recipient__field-title">Telephone</span>
+                        <input class="recipient__input" type="tel" placeholder="+1 (XXX) XXX-XXXX" required />
                     </label>
                     <label class="recipient__field">
-                        <input type="email" placeholder="Email" required />
-                        <span class="recipient__error">Write an email</span>
+                        <span class="recipient__field-title">Email</span>
+                        <input class="recipient__input" type="email" placeholder="loremipsum@gmail.com" required />
                     </label>
                     <button class="recipient__save-btn" type="submit">Save</button>
                 </form>
             </div>
         </div>
+
+        <div class="address">
+            <div class="address__select">
+                <div class="address__header">
+                    <h3 class="address__title">DELIVERY ADDRESSES</h3>
+                    <button class="address__close" type="button"></button>
+                </div>
+                <div class="address__list">
+                    <div class="address__list-wrapper">
+                        <label class="address__item">
+                            <input class="address__radio" type="radio" name="address" />
+                            <div class="address__info">
+                                <p class="address__name">Home</p>
+                                <p class="address__details">Vagharshyan St., 22</p>
+                            </div>
+                            <button class="address__more-btn" type="button"></button>
+                        </label>
+                        <label class="address__item">
+                            <input class="address__radio" type="radio" name="address" />
+                            <div class="address__info">
+                                <p class="address__name">Work</p>
+                                <p class="address__details">Revolution Square, 2/3</p>
+                            </div>
+                            <button class="address__more-btn" type="button"></button>
+                        </label>
+                        <label class="address__item">
+                            <input class="address__radio" type="radio" name="address" />
+                            <div class="address__info">
+                                <p class="address__name">Address</p>
+                                <p class="address__details">Artashisyan St., 40/8</p>
+                            </div>
+                            <button class="address__more-btn" type="button"></button>
+                        </label>
+                        <label class="address__item">
+                            <input class="address__radio" type="radio" name="address" />
+                            <div class="address__info">
+                                <p class="address__name">Address</p>
+                                <p class="address__details">Artashisyan St., 40/8</p>
+                            </div>
+                            <button class="address__more-btn" type="button"></button>
+                        </label>
+                    </div>
+                </div>
+              <div class="address__actions">
+                <button class="address__select-btn" type="button">Select</button>
+                <button class="address__add-btn" type="button"></button>
+              </div>
+            </div>
+            <div class="address__new">
+                <div class="address__header">
+                    <h3 class="address__title">
+                        <span class="address__title-span">NEW</span>
+                        DELIVERY ADDRESS
+                    </h3>
+                    <button class="address__close" type="button"></button>
+                </div>
+                <form class="address__form">
+                    <label class="address__field">
+                        <span class="address__field-title">Street</span>
+                        <input class="address__input address__input_error" type="text" placeholder="Lorem Ipsum" required />
+                    </label>
+                    <div class="address__form-row">
+                        <label class="address__field">
+                            <span class="address__field-title">Flat</span>
+                            <input class="address__input" type="text" placeholder="Lorem Ipsum" required />
+                        </label>
+                        <label class="address__field">
+                            <span class="address__field-title">Flat</span>
+                            <input class="address__input" type="text" placeholder="Lorem Ipsum" required />
+                        </label>
+                    </div>
+                    <div class="address__form-row">
+                        <label class="address__field">
+                            <span class="address__field-title">Floor</span>
+                            <input class="address__input" type="text" placeholder="Lorem Ipsum" required />
+                        </label>
+                        <label class="address__field">
+                            <span class="address__field-title">Entrance</span>
+                            <input class="address__input" type="text" placeholder="Lorem Ipsum" required />
+                        </label>
+                    </div>
+                    <label class="address__field">
+                        <span class="address__field-title">Address name</span>
+                        <input class="address__input" type="text" placeholder="Lorem Ipsum" required />
+                    </label>
+                    <button class="address__save-btn" type="submit">Save</button>
+                </form>
+            </div>
+        </div>          
 
         <nav class="navbar">
             <a class="navbar__logo-link" href="./index.html">
@@ -326,6 +415,11 @@
                             <div class="cart-item__block">
                                 <div class="cart-item__info">
                                     <h3 class="cart-item__title">Submariner</h3>
+                                    <div class="cart-item__price cart-item__price_hidden">
+                                      <p class="cart-item__price-current">$ 84 000</p>
+                                      <p class="cart-item__price-old">$ 92 400</p>
+                                      <span class="cart-item__discount">-10%</span>
+                                    </div>
                                     <div class="cart-item__code">
                                         <span class="cart-item__code-tooltip">Copied</span>
                                         <p class="cart-item__code-value">HR13-574855</p>
@@ -351,6 +445,11 @@
                             <div class="cart-item__block">
                                 <div class="cart-item__info">
                                     <h3 class="cart-item__title">Submariner</h3>
+                                    <div class="cart-item__price cart-item__price_hidden">
+                                      <p class="cart-item__price-current">$ 84 000</p>
+                                      <p class="cart-item__price-old">$ 92 400</p>
+                                      <span class="cart-item__discount">-10%</span>
+                                    </div>
                                     <div class="cart-item__code">
                                         <span class="cart-item__code-tooltip">Copied</span>
                                         <p class="cart-item__code-value">HR13-574855</p>
@@ -374,6 +473,11 @@
                             <div class="cart-item__block">
                                 <div class="cart-item__info">
                                     <h3 class="cart-item__title">Submariner</h3>
+                                    <div class="cart-item__price cart-item__price_hidden">
+                                      <p class="cart-item__price-current">$ 84 000</p>
+                                      <p class="cart-item__price-old">$ 92 400</p>
+                                      <span class="cart-item__discount">-10%</span>
+                                    </div>
                                     <div class="cart-item__code">
                                         <span class="cart-item__code-tooltip">Copied</span>
                                         <p class="cart-item__code-value">HR13-574855</p>

@@ -441,3 +441,17 @@
     color: var(--gray-100);
     font-size: 12px;
 }
+@media screen and (max-width: 1439px) {
+    .cart {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .cart__delivery-info {
+        align-items: start;
+        flex-direction: column;
+        gap: 20px;
+    }
+}

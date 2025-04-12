@@ -84,6 +84,10 @@
     width: 100%;
     box-sizing: border-box;
     padding: 20px 10px;
+    border-bottom: 1px solid var(--gray-200);
+    transition: var(--transition-fast);
+}
+.add-card__input:hover, .add-card__input:focus, .add-card__input:not(:placeholder-shown) {
     border-bottom: 1px solid var(--white);
 }
 .add-card__submit {

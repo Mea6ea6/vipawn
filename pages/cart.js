@@ -30,6 +30,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const recipientCloseBtns = recipientPopup?.querySelectorAll(".recipient__close");
     const recipientAddBtn = recipientPopup?.querySelector(".recipient__add-btn");
     const recipientSaveBtn = recipientPopup?.querySelector(".recipient__save-btn");
+    const addressPopup = document.querySelector(".address");
+    const addressSelectBlock = addressPopup?.querySelector(".address__select");
+    const addressNewBlock = addressPopup?.querySelector(".address__new");
+    const addressOpenBtn = document.querySelector(".cart__delivery-btn_address");
+    const addressAddBtn = addressPopup?.querySelector(".address__add-btn");
+    const addressCloseBtns = addressPopup?.querySelectorAll(".address__close");
+
     // [ Functions ]
     const closeBurgerMenu = () => {
         burgerItems.forEach((item) => item.classList.remove("header__burger-item_active"));
@@ -251,5 +258,36 @@ document.addEventListener("DOMContentLoaded", () => {
         recipientSelectBlock?.classList.remove("recipient__select_active");
         recipientNewBlock?.classList.remove("recipient__new_active");
         navbar?.classList.remove("navbar_hidden");
+    });
+
+    // Address
+    addressOpenBtn?.addEventListener("click", () => {
+        addressPopup.classList.add("address_active");
+        addressSelectBlock?.classList.add("address__select_active");
+        addressNewBlock?.classList.remove("address__new_active");
+        navbar?.classList.add("navbar_hidden");
+    });
+
+    addressAddBtn?.addEventListener("click", () => {
+        addressSelectBlock?.classList.remove("address__select_active");
+        addressNewBlock?.classList.add("address__new_active");
+    });
+
+    addressCloseBtns?.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            addressPopup?.classList.remove("address_active");
+            addressSelectBlock?.classList.remove("address__select_active");
+            addressNewBlock?.classList.remove("address__new_active");
+            navbar?.classList.remove("navbar_hidden");
+        });
+    });
+
+    addressPopup?.addEventListener("click", (event) => {
+        if (event.target === addressPopup) {
+            addressPopup.classList.remove("address_active");
+            addressSelectBlock?.classList.remove("address__select_active");
+            addressNewBlock?.classList.remove("address__new_active");
+            navbar?.classList.remove("navbar_hidden");
+        }
     });
 });

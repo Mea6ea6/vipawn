@@ -80,10 +80,7 @@
     border-bottom: 1px solid var(--gray-200);
     transition: var(--transition-fast);
 }
-.about__card-input:hover {
-    border-bottom: 1px solid var(--white);
-}
-.about__card-input:focus {
+.about__card-input:hover, .about__card-input:focus, .about__card-input:not(:placeholder-shown) {
     border-bottom: 1px solid var(--white);
 }
 .about__card-btn {

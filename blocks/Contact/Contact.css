@@ -68,6 +68,9 @@
     border-bottom: 1px solid var(--gray-200);
     transition: var(--transition-fast);
 }
+.contact__field-input:hover, .contact__field-textarea:hover, .contact__field-input:focus, .contact__field-textarea:focus, .contact__field-input:not(:placeholder-shown), .contact__field-textarea:not(:placeholder-shown) {
+    border-bottom: 1px solid var(--white);
+}
 .contact__field-textarea {
     font-size: 16px;
     line-height: 125%;
@@ -78,12 +81,6 @@
     border-bottom: 1px solid var(--gray-200);
     transition: var(--transition-fast);
     resize: none;
-}
-.contact__field-input:hover, .contact__field-textarea:hover {
-    border-bottom: 1px solid var(--white);
-}
-.contact__field-input:focus, .contact__field-textarea:focus {
-    border-bottom: 1px solid var(--white);
 }
 .contact__check-boxes {
     width: 100%;

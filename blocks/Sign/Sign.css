@@ -74,10 +74,7 @@
     border-bottom: 1px solid var(--gray-200);
     transition: var(--transition-fast);
 }
-.sign__field-input:hover {
-    border-bottom: 1px solid var(--white);
-}
-.sign__field-input:focus {
+.sign__field-input:hover, .sign__field-input:focus, .sign__field-input:not(:placeholder-shown) {
     border-bottom: 1px solid var(--white);
 }
 .sign__create-pass {

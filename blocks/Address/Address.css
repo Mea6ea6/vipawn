@@ -1,4 +1,4 @@
-.recipient {
+.address {
     min-width: 100%;
     min-height: 100vh;
     background-color: #00000060;
@@ -15,12 +15,12 @@
     transition: var(--transition-fast);
     cursor: pointer;
 }
-.recipient_active {
+.address_active {
     z-index: 999999;
     opacity: 1;
     transform: scale(1);
 }
-.recipient__select {
+.address__select {
     background-color: var(--gray-400);
     max-width: 500px;
     width: 100%;
@@ -31,10 +31,10 @@
     cursor: auto;
     overflow: auto;
 }
-.recipient__select_active {
+.address__select_active {
     display: flex;
 }
-.recipient__header {
+.address__header {
     width: 100%;
     box-sizing: border-box;
     padding: 20px;
@@ -42,27 +42,27 @@
     justify-content: space-between;
     box-shadow: 0 10px 60px 0 #00000099;
 }
-.recipient__title {
+.address__title {
     font-size: 16px;
     font-weight: var(--medium-weight);
     text-transform: uppercase;
 }
-.recipient__close {
+.address__close {
     background-color: transparent;
-    background-image: url('../../images/recipient/__close.svg');
+    background-image: url('../../images/address/__close.svg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     width: 14px;
     height: 14px;
 }
-.recipient__list {
+.address__list {
     width: 100%;
     box-sizing: border-box;
     padding: 0 20px;
     overflow: hidden;
 }
-.recipient__list-wrapper {
+.address__list-wrapper {
     width: 100%;
     max-height: 240px;
     height: 100%;
@@ -75,18 +75,18 @@
     overflow: auto;
     direction: rtl;
 }
-.recipient__list-wrapper::-webkit-scrollbar {
+.address__list-wrapper::-webkit-scrollbar {
     width: 4px;
 }
-.recipient__list-wrapper::-webkit-scrollbar-track {
+.address__list-wrapper::-webkit-scrollbar-track {
     background: transparent;
     margin: 20px 0;
 }
-.recipient__list-wrapper::-webkit-scrollbar-thumb {
+.address__list-wrapper::-webkit-scrollbar-thumb {
     background-color: var(--gray-200);
     border-radius: 4px;
 }
-.recipient__item {
+.address__item {
     width: 100%;
     box-sizing: border-box;
     padding: 4px 0;
@@ -95,7 +95,7 @@
     direction: ltr;
     cursor: pointer;
 }
-.recipient__radio {
+.address__radio {
     background-color: transparent;
     width: 20px;
     height: 20px;
@@ -107,10 +107,10 @@
     appearance: none;
     -webkit-appearance: none;
 }
-.recipient__radio:hover {
+.address__radio:hover {
     cursor: pointer;
 }
-.recipient__radio:after {
+.address__radio:after {
     content: "";
     background-color: var(--gray-100);
     width: 10px;
@@ -120,25 +120,25 @@
     opacity: 0;
     transition: var(--transition-fast);
 }
-.recipient__radio:checked:after {
+.address__radio:checked:after {
     opacity: 1;
 }
-.recipient__info {
+.address__info {
     display: flex;
     align-items: start;
     flex-direction: column;
     gap: 10px;
 }
-.recipient__name {
+.address__name {
     font-size: 16px;
 }
-.recipient__details {
+.address__details {
     color: var(--gray-100);
     font-size: 14px;
 }
-.recipient__more-button {
+.address__more-btn {
     background-color: transparent;
-    background-image: url('../../images/recipient/__more.svg');
+    background-image: url('../../images/address/__more.svg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -146,7 +146,7 @@
     height: 14px;
     margin: 0 0 0 auto;
 }
-.recipient__actions {
+.address__actions {
     width: 100%;
     box-sizing: border-box;
     padding: 20px;
@@ -156,7 +156,7 @@
     gap: 10px;
     box-shadow: 0 -10px 60px 0 #00000099;
 }
-.recipient__select-btn {
+.address__select-btn {
     color: var(--gray-400);
     font-size: 16px;
     font-weight: var(--medium-weight);
@@ -167,9 +167,9 @@
     justify-content: center;
     border-radius: 6px;
 }
-.recipient__add-btn {
+.address__add-btn {
     background-color: transparent;
-    background-image: url('../../images/recipient/__add.svg');
+    background-image: url('../../images/address/__add.svg');
     background-position: center;
     background-size: 16px;
     background-repeat: no-repeat;
@@ -178,7 +178,7 @@
     border: 1px solid var(--gray-200);
     border-radius: 6px;
 }
-.recipient__new {
+.address__new {
     background-color: var(--gray-400);
     max-width: 440px;
     width: 100%;
@@ -192,59 +192,40 @@
     cursor: auto;
     overflow: auto;
 }
-.recipient__new .recipient__header {
+.address__new .address__header {
     padding: unset;
     box-shadow: unset;
 }
-.recipient__new_active {
+.address__new_active {
     display: flex;
 }
-.recipient__title-span {
+.address__title-span {
     color: var(--accent);
 }
-.recipient__alert {
-    background-color: var(--gray-300);
-    width: 100%;
-    box-sizing: border-box;
-    padding: 20px;
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-    gap: 10px;
-    border-radius: 6px;
-}
-.recipient__alert-heading {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.recipient__alert-title {
-    font-size: 16px;
-}
-.recipient__alert-text {
-    color: var(--gray-100);
-    font-size: 14px;
-    line-height: 129%;
-}
-.recipient__form {
+.address__form {
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 20px;
 }
-.recipient__field {
+.address__form-row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.address__field {
     width: 100%;
     display: flex;
     align-items: start;
     flex-direction: column;
     position: relative;
 }
-.recipient__field-title {
+.address__field-title {
     font-size: 16px;
 }
-.recipient__input {
+.address__input {
     background-color: transparent;
     width: 100%;
     box-sizing: border-box;
@@ -252,13 +233,13 @@
     border-bottom: 1px solid var(--gray-200);
     transition: var(--transition-fast);
 }
-.recipient__input:hover, .recipient__input:focus, .recipient__input:not(:placeholder-shown) {
+.address__input:hover, .address__input:focus, .address__input:not(:placeholder-shown) {
     border-bottom: 1px solid var(--white);
 }
-.recipient__input_error {
+.address__input_error {
     border-bottom: 1px solid var(--error);
 }
-.recipient__save-btn {
+.address__save-btn {
     color: var(--gray-400);
     font-size: 16px;
     font-weight: var(--medium-weight);
