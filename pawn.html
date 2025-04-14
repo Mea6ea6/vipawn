@@ -5,10 +5,145 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/x-icon/x-icon.svg" type="image/x-icon">
     <link rel="stylesheet" href="./pages/pawn.css" />
-    <title>Cart</title>
+    <title>Pawn</title>
 </head>
 <body class="background">
     <div class="page">
+        <form class="pawn-popup">
+            <div class="pawn-popup__step pawn-popup__step_active" data-step="1">
+                <div class="pawn-popup__header">
+                    <h3 class="pawn-popup__title">Select the item category</h3>
+                    <button class="pawn-popup__close" type="button"></button>
+                </div>
+                <ul class="pawn-popup__category-list">
+                    <li class="pawn-popup__category-item">
+                        <label class="pawn-popup__category-label" for="pawn-watches">
+                            <input class="pawn-popup__category-checkbox" type="radio" name="pawn-item" id="pawn-watches" />
+                            <div class="pawn-popup__category-text">
+                                <div class="pawn-popup__category-heading">
+                                    <img class="pawn-popup__category-icon" src="./images/pawn-popup/__watches.svg" alt="pawn-icon">
+                                    <p class="pawn-popup__category-title">Watches</p>
+                                </div>
+                                <p class="pawn-popup__category-caption">Rolex, Omega, Cartier, Bulgari, Casio and more.</p>
+                            </div>
+                        </label>
+                    </li>
+                    <li class="pawn-popup__category-item">
+                        <label class="pawn-popup__category-label" for="pawn-jewerly">
+                            <input class="pawn-popup__category-checkbox" type="radio" name="pawn-item" id="pawn-jewerly" />
+                            <div class="pawn-popup__category-text">
+                                <div class="pawn-popup__category-heading">
+                                    <img class="pawn-popup__category-icon" src="./images/pawn-popup/__jewerly.svg" alt="pawn-icon">
+                                    <p class="pawn-popup__category-title">Jewerly</p>
+                                </div>
+                                <p class="pawn-popup__category-caption">Rings, chains, pedants, bracelets, necklaces and more.</p>
+                            </div>
+                        </label>
+                    </li>
+                    <li class="pawn-popup__category-item">
+                        <label class="pawn-popup__category-label" for="pawn-electronics">
+                            <input class="pawn-popup__category-checkbox" type="radio" name="pawn-item" id="pawn-electronics" />
+                            <div class="pawn-popup__category-text">
+                                <div class="pawn-popup__category-heading">
+                                    <img class="pawn-popup__category-icon" src="./images/pawn-popup/__electronics.svg" alt="pawn-icon">
+                                    <p class="pawn-popup__category-title">Electronics</p>
+                                </div>
+                                <p class="pawn-popup__category-caption">Phones, laptops, TV, PC and more.</p>
+                            </div>
+                        </label>
+                    </li>
+                    <li class="pawn-popup__category-item">
+                        <label class="pawn-popup__category-label" for="pawn-gold">
+                            <input class="pawn-popup__category-checkbox" type="radio" name="pawn-item" id="pawn-gold" />
+                            <div class="pawn-popup__category-text">
+                                <div class="pawn-popup__category-heading">
+                                    <img class="pawn-popup__category-icon" src="./images/pawn-popup/__gold.svg" alt="pawn-icon">
+                                    <p class="pawn-popup__category-title">Gold</p>
+                                </div>
+                                <p class="pawn-popup__category-caption">Yellow gold, rose gold, white gold and more.</p>
+                            </div>
+                        </label>
+                    </li>
+                    <li class="pawn-popup__category-item">
+                        <label class="pawn-popup__category-label" for="pawn-designers">
+                            <input class="pawn-popup__category-checkbox" type="radio" name="pawn-item" id="pawn-designers" />
+                            <div class="pawn-popup__category-text">
+                                <div class="pawn-popup__category-heading">
+                                    <img class="pawn-popup__category-icon" src="./images/pawn-popup/__designers.svg" alt="pawn-icon">
+                                    <p class="pawn-popup__category-title">Designers</p>
+                                </div>
+                                <p class="pawn-popup__category-caption">Gucci, Cartier, Tiffany & Co, Chanel, Louis Vuitton and more.</p>
+                            </div>
+                        </label>
+                    </li>
+                </ul>
+                <button class="pawn-popup__next" type="button">Select</button>
+            </div>
+
+            <div class="pawn-popup__step" data-step="2">
+                <div class="pawn-popup__header">
+                    <h3 class="pawn-popup__title">Select the item category</h3>
+                    <button class="pawn-popup__close" type="button"></button>
+                </div>
+                <div class="pawn-popup__fields">
+                    <label class="pawn-popup__field">
+                      <span class="pawn-popup__label">
+                        Description
+                        <span class="pawn-popup__label-span">*</span>
+                    </span>
+                      <input class="pawn-popup__input" type="number" placeholder="Rolex Submariner" />
+                    </label>
+                    <div class="pawn-popup__row">
+                        <label class="pawn-popup__field">
+                            <span class="pawn-popup__label">
+                                Weight, g
+                              <span class="pawn-popup__label-span">*</span>
+                          </span>
+                          <input class="pawn-popup__input" type="number" placeholder="107" />
+                        </label>
+                        <label class="pawn-popup__field">
+                          <span class="pawn-popup__label">desired price, $</span>
+                          <input class="pawn-popup__input" type="number" placeholder="8 000" />
+                        </label>
+                    </div>
+                </div>
+                <div class="pawn-popup__controls">
+                    <button class="pawn-popup__back" type="button">Back</button>
+                    <button class="pawn-popup__next" type="button">Select</button>
+                </div>
+            </div>
+        
+            <div class="pawn-popup__step" data-step="3">
+                <div class="pawn-popup__header">
+                    <h3 class="pawn-popup__title">Select the item category</h3>
+                    <button class="pawn-popup__close" type="button"></button>
+                </div>
+                <label class="pawn-popup__upload">
+                    <input type="file" accept=".jpg, .jpeg, .png" class="pawn-popup__upload-input" />
+                    <div class="pawn-popup__upload-box">
+                        <img class="pawn-popup__upload-icon" src="./images/pawn-popup/__upload.svg" alt="upload-icon">
+                        <p class="pawn-popup__browse">Drop your image here or <span class="pawn-popup__browse-link">browse</span></p>
+                        <p class="pawn-popup__hint">Supports: JPG, JPEG, PNG</p>
+                    </div>
+                </label>
+                <div class="pawn-popup__controls">
+                    <button class="pawn-popup__back" type="button">Back</button>
+                    <button class="pawn-popup__next" type="submit">Select</button>
+                </div>
+            </div>  
+        
+            <div class="pawn-popup__step" data-step="4">
+                <div class="pawn-popup__final">
+                    <img class="pawn-popup__success-icon" src="./images/pawn-popup/__sucsess.svg" alt="success-icon">
+                    <p class="pawn-popup__success-text">
+                        Thank you for your request. Support will contact you within 2 weeks maximum.
+                    </p>
+                </div>
+                <button class="pawn-popup__next" type="button">Close</button>
+            </div>
+        </form>
+  
+
         <nav class="navbar">
             <a class="navbar__logo-link" href="./index.html">
                 <img class="navbar__logo-icon" src="./images/navbar/__logo.svg" alt="vipawn">
