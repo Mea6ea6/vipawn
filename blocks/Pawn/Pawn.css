@@ -62,12 +62,24 @@
     background-color: var(--gray-300);
     box-sizing: border-box;
     padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     border-radius: 6px;
     transition: var(--transition-fast);
 }
 .pawn__tab_active {
     color: var(--gray-400);
     background-color: var(--white);
+}
+.pawn__tab_active .pawn__tab-icon {
+    display: none;
+}
+.pawn__tab_active .pawn__tab-active-icon {
+    display: block;
+}
+.pawn__tab-active-icon {
+    display: none;
 }
 .pawn__container {
     width: 100%;
@@ -142,14 +154,14 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.pawn__table-button {
+.pawn__table-btn {
     color: var(--gray-100);
     font-size: 16px;
     font-weight: var(--medium-weight);
     background-color: transparent;
     position: relative;
 }
-.pawn__table-button::after {
+.pawn__table-btn::after {
     content: '';
     width: 100%;
     height: 1.5px;
@@ -161,7 +173,70 @@
     opacity: 0;
     transition: var(--transition-fast);
 }
-.pawn__table-button:hover::after {
+.pawn__table-btn:hover::after {
+    opacity: 1;
+}
+.pawn__cards {
+    width: 100%;
+    display: none;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+}
+.pawn__card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.pawn__card-row {
+    background-color: var(--gray-400);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+}
+.pawn__card-row:nth-child(even) {
+    background-color: var(--gray-300);
+}
+.pawn__card-cell {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.pawn__card-title {
+    font-size: 16px;
+    font-weight: var(--medium-weight);
+    line-height: 125%;
+}
+.pawn__card-text {
+    font-size: 16px;
+    line-height: 125%;
+}
+.pawn__card-btn {
+    color: var(--gray-100);
+    font-size: 16px;
+    font-weight: var(--medium-weight);
+    background-color: transparent;
+    margin: 0 0 0 auto;
+    position: relative;
+}
+.pawn__card-btn::after {
+    content: '';
+    width: 100%;
+    height: 1.5px;
+    background-color: var(--gray-100);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 4px;
+    opacity: 0;
+    transition: var(--transition-fast);
+}
+.pawn__card-btn:hover::after {
     opacity: 1;
 }
 .pawn__show-more {
@@ -321,8 +396,14 @@
     }
 }
 @media screen and (max-width: 767px) {
-    .pawn__table-items {
+    .pawn__tab-text {
         display: none;
+    }
+    .pawn__table {
+        display: none;
+    }
+    .pawn__cards {
+        display: flex;
     }
     .pawn__locations-list {
         display: flex;
